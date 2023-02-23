@@ -1,0 +1,27 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Moxo_Web_UI.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Developer" Type="System.String" Scope="User">
+      <Value Profile="(Default)">moxolib.userdefined.DeveloperName</Value>
+    </Setting>
+    <Setting Name="Publisher" Type="System.String" Scope="User">
+      <Value Profile="(Default)">moxolib.userdefined.PublisherName</Value>
+    </Setting>
+    <Setting Name="Version" Type="System.String" Scope="User">
+      <Value Profile="(Default)">moxolib.userdefined.ApplicationVersion</Value>
+    </Setting>
+    <Setting Name="ApplicationName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">moxolib.userdefined.ApplicationName</Value>
+    </Setting>
+    <Setting Name="WebViewSource" Type="System.String" Scope="User">
+      <Value Profile="(Default)">moxolib.userdefined.WebViewSource</Value>
+    </Setting>
+    <Setting Name="MainWindowHeight" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">1234567890</Value>
+    </Setting>
+    <Setting Name="MainWindowWidth" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">9876543210</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
