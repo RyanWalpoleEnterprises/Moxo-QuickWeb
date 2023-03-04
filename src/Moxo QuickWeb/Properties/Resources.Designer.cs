@@ -73,6 +73,26 @@ namespace Moxo_QuickWeb.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap check_circle {
+            get {
+                object obj = ResourceManager.GetObject("check-circle", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap check_circle__Custom_ {
+            get {
+                object obj = ResourceManager.GetObject("check-circle (Custom)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap DotLXLogo {
             get {
                 object obj = ResourceManager.GetObject("DotLXLogo", resourceCulture);
@@ -93,9 +113,119 @@ namespace Moxo_QuickWeb.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap file_cancel__Custom_ {
+            get {
+                object obj = ResourceManager.GetObject("file-cancel (Custom)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap file_cancel__Custom___1_ {
+            get {
+                object obj = ResourceManager.GetObject("file-cancel (Custom) (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Invalid {
+            get {
+                object obj = ResourceManager.GetObject("Invalid", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap MoxoBackground_Color {
             get {
                 object obj = ResourceManager.GetObject("MoxoBackground-Color", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap MoxoBackPreview {
+            get {
+                object obj = ResourceManager.GetObject("MoxoBackPreview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap MoxoBlankWindow {
+            get {
+                object obj = ResourceManager.GetObject("MoxoBlankWindow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap MoxoBlankWindowOutlined {
+            get {
+                object obj = ResourceManager.GetObject("MoxoBlankWindowOutlined", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap MoxoBracketHeight {
+            get {
+                object obj = ResourceManager.GetObject("MoxoBracketHeight", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap MoxoBracketHeightThin {
+            get {
+                object obj = ResourceManager.GetObject("MoxoBracketHeightThin", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap MoxoBracketWidth {
+            get {
+                object obj = ResourceManager.GetObject("MoxoBracketWidth", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap MoxoBracketWidthThin {
+            get {
+                object obj = ResourceManager.GetObject("MoxoBracketWidthThin", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap MoxoForwardPreview {
+            get {
+                object obj = ResourceManager.GetObject("MoxoForwardPreview", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -126,6 +256,16 @@ namespace Moxo_QuickWeb.Properties {
         internal static System.Drawing.Bitmap MoxoLogoFullWhite1 {
             get {
                 object obj = ResourceManager.GetObject("MoxoLogoFullWhite1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap MoxoRefreshPreview {
+            get {
+                object obj = ResourceManager.GetObject("MoxoRefreshPreview", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

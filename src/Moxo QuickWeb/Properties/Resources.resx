@@ -118,28 +118,70 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="RWE_logo_White" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\RWE_logo_White.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="file-cancel (Custom)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\file-cancel (Custom).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="MoxoLogoFullWhite" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MoxoLogoFullWhite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="check-circle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\check-circle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MoxoForwardPreview" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MoxoForwardPreview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="MoxoLogoFull-1024x433" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MoxoLogoFull-1024x433.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="MoxoBackground-Color" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MoxoBackground-Color.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Invalid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Invalid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="DotLXLogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\DotLXLogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="MoxoLogoFullWhite1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MoxoLogoFullWhite1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="RWE_logo_White" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RWE_logo_White.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="DotLXLogoWhite" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\DotLXLogoWhite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="MoxoBracketHeightThin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MoxoBracketHeightThin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="file-cancel (Custom) (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\file-cancel (Custom) (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DotLXLogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DotLXLogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MoxoLogoFullWhite" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MoxoLogoFullWhite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MoxoBracketWidthThin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MoxoBracketWidthThin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name=".NETLogoMoxo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\.NETLogoMoxo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MoxoBlankWindow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MoxoBlankWindow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MoxoRefreshPreview" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MoxoRefreshPreview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MoxoBackPreview" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MoxoBackPreview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MoxoLogoFullWhite1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MoxoLogoFullWhite1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MoxoBracketHeight" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MoxoBracketHeight.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MoxoBackground-Color" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MoxoBackground-Color.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MoxoBracketWidth" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MoxoBracketWidth.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MoxoBlankWindowOutlined" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MoxoBlankWindowOutlined.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="check-circle (Custom)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\check-circle (Custom).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
