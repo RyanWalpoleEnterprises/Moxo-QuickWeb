@@ -5,5 +5,8 @@
     <Setting Name="Version" Type="System.String" Scope="User">
       <Value Profile="(Default)">230201</Value>
     </Setting>
+    <Setting Name="dotLX_tmpICO" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
   </Settings>
 </SettingsFile>
