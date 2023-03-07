@@ -19,3 +19,4 @@ C:\Users\rwalpole\Documents\GitHub\Moxo-QuickWeb\moxolib\win32\moxo.web.UI\Moxo 
 C:\Users\rwalpole\Documents\GitHub\Moxo-QuickWeb\moxolib\win32\moxo.web.UI\Moxo Web UI\obj\Debug\Moxo Web UI.csproj.CopyComplete
 C:\Users\rwalpole\Documents\GitHub\Moxo-QuickWeb\moxolib\win32\moxo.web.UI\Moxo Web UI\obj\Debug\Moxo Web UI.exe
 C:\Users\rwalpole\Documents\GitHub\Moxo-QuickWeb\moxolib\win32\moxo.web.UI\Moxo Web UI\obj\Debug\Moxo Web UI.pdb
+C:\Users\rwalpole\Documents\GitHub\Moxo-QuickWeb\moxolib\win32\moxo.web.UI\Moxo Web UI\obj\Debug\Moxo_Web_UI.UIWindowAbout.resources
