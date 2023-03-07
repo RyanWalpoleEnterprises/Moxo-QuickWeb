@@ -60,7 +60,7 @@
             // UI_Label_MoxoDisc
             // 
             this.UI_Label_MoxoDisc.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.UI_Label_MoxoDisc.Location = new System.Drawing.Point(20, 171);
+            this.UI_Label_MoxoDisc.Location = new System.Drawing.Point(20, 148);
             this.UI_Label_MoxoDisc.Name = "UI_Label_MoxoDisc";
             this.UI_Label_MoxoDisc.Size = new System.Drawing.Size(172, 42);
             this.UI_Label_MoxoDisc.TabIndex = 2;
@@ -69,7 +69,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Moxo_Web_UI.Properties.Resources.MoxoLogoFull_1024x433;
-            this.pictureBox1.Location = new System.Drawing.Point(13, 113);
+            this.pictureBox1.Location = new System.Drawing.Point(13, 90);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(177, 64);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -80,7 +80,7 @@
             // 
             this.UI_LinkButton_Moxo.AutoSize = true;
             this.UI_LinkButton_Moxo.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.UI_LinkButton_Moxo.Location = new System.Drawing.Point(112, 184);
+            this.UI_LinkButton_Moxo.Location = new System.Drawing.Point(112, 161);
             this.UI_LinkButton_Moxo.Name = "UI_LinkButton_Moxo";
             this.UI_LinkButton_Moxo.Size = new System.Drawing.Size(65, 13);
             this.UI_LinkButton_Moxo.TabIndex = 4;
@@ -90,7 +90,7 @@
             // 
             // UI_Button_Close
             // 
-            this.UI_Button_Close.Location = new System.Drawing.Point(248, 174);
+            this.UI_Button_Close.Location = new System.Drawing.Point(248, 151);
             this.UI_Button_Close.Name = "UI_Button_Close";
             this.UI_Button_Close.Size = new System.Drawing.Size(92, 23);
             this.UI_Button_Close.TabIndex = 5;
@@ -102,7 +102,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(352, 217);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(352, 188);
             this.Controls.Add(this.UI_Button_Close);
             this.Controls.Add(this.UI_LinkButton_Moxo);
             this.Controls.Add(this.UI_Label_MoxoDisc);
