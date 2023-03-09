@@ -8,5 +8,8 @@
     <Setting Name="dotLX_tmpICO" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
+    <Setting Name="BuildVersion" Type="System.String" Scope="User">
+      <Value Profile="(Default)">0903214P</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

@@ -46,5 +46,17 @@ namespace Moxo_QuickWeb.Properties {
                 this["dotLX_tmpICO"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0903214P")]
+        public string BuildVersion {
+            get {
+                return ((string)(this["BuildVersion"]));
+            }
+            set {
+                this["BuildVersion"] = value;
+            }
+        }
     }
 }
