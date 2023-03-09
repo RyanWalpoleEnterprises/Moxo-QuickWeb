@@ -1,7 +1,6 @@
 C:\Users\rwalpole\Documents\GitHub\Moxo-QuickWeb\moxolib\win32\moxo.web.UI\Moxo Web UI\bin\Debug\runtimes\win-x86\native\WebView2Loader.dll
 C:\Users\rwalpole\Documents\GitHub\Moxo-QuickWeb\moxolib\win32\moxo.web.UI\Moxo Web UI\bin\Debug\runtimes\win-x64\native\WebView2Loader.dll
 C:\Users\rwalpole\Documents\GitHub\Moxo-QuickWeb\moxolib\win32\moxo.web.UI\Moxo Web UI\bin\Debug\runtimes\win-arm64\native\WebView2Loader.dll
-C:\Users\rwalpole\Documents\GitHub\Moxo-QuickWeb\moxolib\win32\moxo.web.UI\Moxo Web UI\bin\Debug\Moxo Web UI.exe.config
 C:\Users\rwalpole\Documents\GitHub\Moxo-QuickWeb\moxolib\win32\moxo.web.UI\Moxo Web UI\bin\Debug\Moxo Web UI.exe
 C:\Users\rwalpole\Documents\GitHub\Moxo-QuickWeb\moxolib\win32\moxo.web.UI\Moxo Web UI\bin\Debug\Moxo Web UI.pdb
 C:\Users\rwalpole\Documents\GitHub\Moxo-QuickWeb\moxolib\win32\moxo.web.UI\Moxo Web UI\bin\Debug\Microsoft.Web.WebView2.Core.dll
