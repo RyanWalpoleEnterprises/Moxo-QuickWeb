@@ -69,42 +69,38 @@
             // 
             // UI_Button_Back
             // 
-            this.UI_Button_Back.Image = global::Moxo_Web_UI.Properties.Resources.Dark_Arrow_Left;
             this.UI_Button_Back.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.UI_Button_Back.Margin = new System.Windows.Forms.Padding(15, 1, 0, 2);
             this.UI_Button_Back.Name = "UI_Button_Back";
-            this.UI_Button_Back.Size = new System.Drawing.Size(52, 22);
+            this.UI_Button_Back.Size = new System.Drawing.Size(36, 22);
             this.UI_Button_Back.Text = "Back";
             this.UI_Button_Back.Click += new System.EventHandler(this.UI_Button_Back_Click);
             // 
             // UI_Button_Refresh
             // 
-            this.UI_Button_Refresh.Image = global::Moxo_Web_UI.Properties.Resources.Dark_Reload;
             this.UI_Button_Refresh.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.UI_Button_Refresh.Margin = new System.Windows.Forms.Padding(7, 1, 0, 2);
             this.UI_Button_Refresh.Name = "UI_Button_Refresh";
-            this.UI_Button_Refresh.Size = new System.Drawing.Size(66, 22);
+            this.UI_Button_Refresh.Size = new System.Drawing.Size(50, 22);
             this.UI_Button_Refresh.Text = "Refresh";
             this.UI_Button_Refresh.Click += new System.EventHandler(this.UI_Button_Refresh_Click);
             // 
             // UI_Button_Forward
             // 
-            this.UI_Button_Forward.Image = global::Moxo_Web_UI.Properties.Resources.ic_fluent_arrow_right_24_filled;
             this.UI_Button_Forward.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.UI_Button_Forward.Margin = new System.Windows.Forms.Padding(7, 1, 0, 2);
             this.UI_Button_Forward.Name = "UI_Button_Forward";
-            this.UI_Button_Forward.Size = new System.Drawing.Size(70, 22);
+            this.UI_Button_Forward.Size = new System.Drawing.Size(54, 22);
             this.UI_Button_Forward.Text = "Forward";
             this.UI_Button_Forward.Click += new System.EventHandler(this.UI_Button_Forward_Click);
             // 
             // UI_Button_About
             // 
             this.UI_Button_About.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.UI_Button_About.Image = global::Moxo_Web_UI.Properties.Resources.ic_fluent_chat_help_24_filled;
             this.UI_Button_About.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.UI_Button_About.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
             this.UI_Button_About.Name = "UI_Button_About";
-            this.UI_Button_About.Size = new System.Drawing.Size(60, 22);
+            this.UI_Button_About.Size = new System.Drawing.Size(44, 22);
             this.UI_Button_About.Text = "About";
             this.UI_Button_About.Click += new System.EventHandler(this.UI_Button_About_Click);
             // 

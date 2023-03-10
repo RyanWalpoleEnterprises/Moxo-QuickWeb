@@ -37,6 +37,22 @@ namespace Moxo_Web_UI
             this.Height = Properties.Settings.Default.MainWindowHeight;
             this.Width = Properties.Settings.Default.MainWindowWidth;
             this.Text = Properties.Settings.Default.ApplicationName;
+
+            //Set iconography
+            UI_Button_Back.Image = Properties.Resources.Dark_Arrow_Left;
+            UI_Button_Forward.Image = Properties.Resources.ic_fluent_arrow_right_24_filled;
+            UI_Button_Refresh.Image = Properties.Resources.Dark_Reload;
+            UI_Button_About.Image = Properties.Resources.ic_fluent_chat_help_24_filled;
+
+            try
+            {
+                //Set the URL for the WebView
+                UI_WebView.Source = new Uri(Settings.Default.WebViewSource);
+            }
+            catch
+            {
+                //
+            }
         }
 
         private void PreInitializeBrowserAsync()
