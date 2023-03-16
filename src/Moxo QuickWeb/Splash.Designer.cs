@@ -98,7 +98,7 @@
             this.Version.ForeColor = System.Drawing.Color.White;
             this.Version.Location = new System.Drawing.Point(12, 235);
             this.Version.Name = "Version";
-            this.Version.Size = new System.Drawing.Size(169, 23);
+            this.Version.Size = new System.Drawing.Size(313, 23);
             this.Version.TabIndex = 4;
             this.Version.Text = "Version: ";
             this.Version.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
