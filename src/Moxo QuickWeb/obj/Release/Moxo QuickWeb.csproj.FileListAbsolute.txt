@@ -10,3 +10,6 @@ C:\Users\rwalpole\Documents\GitHub\Moxo-QuickWeb\src\Moxo QuickWeb\obj\Release\M
 C:\Users\rwalpole\Documents\GitHub\Moxo-QuickWeb\src\Moxo QuickWeb\obj\Release\Moxo QuickWeb.csproj.CoreCompileInputs.cache
 C:\Users\rwalpole\Documents\GitHub\Moxo-QuickWeb\src\Moxo QuickWeb\obj\Release\Moxo QuickWeb.exe
 C:\Users\rwalpole\Documents\GitHub\Moxo-QuickWeb\src\Moxo QuickWeb\obj\Release\Moxo QuickWeb.pdb
+C:\Users\rwalpole\Documents\GitHub\Moxo-QuickWeb\src\Moxo QuickWeb\obj\Release\Moxo_QuickWeb.NewDotNET.resources
+C:\Users\rwalpole\Documents\GitHub\Moxo-QuickWeb\src\Moxo QuickWeb\obj\Release\Moxo_QuickWeb.NewdotLX.resources
+C:\Users\rwalpole\Documents\GitHub\Moxo-QuickWeb\src\Moxo QuickWeb\obj\Release\Moxo_QuickWeb.Update.resources

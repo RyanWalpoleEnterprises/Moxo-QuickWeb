@@ -20,21 +20,18 @@ namespace Moxo_Web_UI
 
             try
             {
-                string WV = CoreWebView2Environment.GetAvailableBrowserVersionString();
-
-                if (WV != null)
+                var version = CoreWebView2Environment.GetAvailableBrowserVersionString();
+                if(version != null)
                 {
                     Application.Run(new Startup());
                 }
-                else
-                {
-                    //Microsoft Edge WebView2 Runtime Not Installed
-                    MessageBox.Show("WebView2 is not installed on this system. For more information, visit https://github.com/RyanWalpoleEnterprises/Moxo-QuickWeb");
-                }
+                // Do something with `version` if needed.
             }
-            catch
+            catch (WebView2RuntimeNotFoundException exception)
             {
-                //Microsoft Edge WebView2 Runtime Assumed Not Installed
+                // Handle the runtime not being installed.
+                // `exception.Message` is very nicely specific: It (currently at least) says "Couldn't find a compatible Webview2 Runtime installation to host WebViews."
+                //Microsoft Edge WebView2 Runtime Not Installed
                 MessageBox.Show("WebView2 is not installed on this system. For more information, visit https://github.com/RyanWalpoleEnterprises/Moxo-QuickWeb");
             }
         }
