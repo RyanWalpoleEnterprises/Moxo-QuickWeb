@@ -39,7 +39,7 @@ namespace Moxo_QuickWeb
 
                     wc.DownloadFileAsync(
                         // Param1 = Link of file
-                        new System.Uri("https://github.com/RyanWalpoleEnterprises/Moxo-QuickWeb/blob/main/installer/installmoxoquickweb.exe"),
+                        new System.Uri("https://github.com/RyanWalpoleEnterprises/Moxo-QuickWeb/raw/main/installer/installmoxoquickweb.exe"),
                         // Param2 = Path to save
                         updatelocation
                     );
