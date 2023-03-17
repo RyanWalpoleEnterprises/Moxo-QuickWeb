@@ -36,12 +36,21 @@ When targeting .NET, you will have a fully realised Visual Studio project. From 
 
 <div id="user-content-toc" align=center>
   <ul>
-    <summary><h1 align=center>Get Started</h1></summary><h4 align=center>While you wait for Moxo QuickWeb Studio to release, familiarise yourself with how things work.</h4>
+    <summary><h1 align=center>Get Started</h1></summary><h4 align=center>QuickWeb Studio is available Now!</h4>
   </ul>
 </div>
 <p align=center>
-In anticipation of Moxo QuickWeb Studio's release on March 17, 2023 - we've prepared some documentation so you can familiarise yourself with how Moxo QuickWeb Studio works and how each project type differs from each other - as well as some basic information about how to further customise your Moxo .NET projects in Visual Studio. That way you can be ready to create Moxo web-apps from day 1.
+Moxo QuickWeb Studio is now available for Windows users. To get started, download Moxo QuickWeb Studio from the link below. Then familiarise yourself with our documentation so you can start developing quicker and easier.
 </p>
 
 <p align=center><a href="https://github.com/RyanWalpoleEnterprises/Moxo-QuickWeb/wiki">View QuickWeb Documentation</a></p>
+<p align=center><a href="https://github.com/RyanWalpoleEnterprises/Moxo-QuickWeb/releases/latest">Download Moxo QuickWeb Studio</a></p>
+<br>
+<p align=center>
+Encountered an issue or bug? Think you have some ideas that may improve Moxo QuickWeb Studio? Please let us know!
+</p>
+<p align=center><a href="https://github.com/RyanWalpoleEnterprises/Moxo-QuickWeb/issues">View Reported Bugs and Feature Requests</a></p>
+<p align=center><a href="https://github.com/RyanWalpoleEnterprises/Moxo-QuickWeb/issues/new?assignees=&labels=&template=issue-report.yaml&title=%5BIssue%5D+">Report a Bug</a>
+<p align=center><a href="https://github.com/RyanWalpoleEnterprises/Moxo-QuickWeb/security/advisories/new">Report a Security Vulnerability</a>
+</p>
 <br>
