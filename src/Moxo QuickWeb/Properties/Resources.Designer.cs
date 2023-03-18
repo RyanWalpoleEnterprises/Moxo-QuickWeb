@@ -263,6 +263,36 @@ namespace Moxo_QuickWeb.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap MoxoQWSColorLogo {
+            get {
+                object obj = ResourceManager.GetObject("MoxoQWSColorLogo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap MoxoQWSWhiteFullLogo {
+            get {
+                object obj = ResourceManager.GetObject("MoxoQWSWhiteFullLogo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap MoxoQWSWhiteLogo {
+            get {
+                object obj = ResourceManager.GetObject("MoxoQWSWhiteLogo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap MoxoRefreshPreview {
             get {
                 object obj = ResourceManager.GetObject("MoxoRefreshPreview", resourceCulture);
