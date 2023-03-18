@@ -143,6 +143,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="MoxoIcon.ico" />
+    <None Include="Resources\MoxoQWSWhiteFullLogo.png" />
     <None Include="Resources\MoxoQWSColorLogo.png" />
     <None Include="Resources\MoxoQWSWhiteLogo.png" />
     <None Include="Resources\check-circle %28Custom%29.png" />
