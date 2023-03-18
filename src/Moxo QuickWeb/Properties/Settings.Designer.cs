@@ -25,7 +25,7 @@ namespace Moxo_QuickWeb.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("230301")]
+        [global::System.Configuration.DefaultSettingValueAttribute("230302")]
         public string Version {
             get {
                 return ((string)(this["Version"]));
@@ -49,13 +49,37 @@ namespace Moxo_QuickWeb.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("10031603A")]
+        [global::System.Configuration.DefaultSettingValueAttribute("01101703P")]
         public string BuildVersion {
             get {
                 return ((string)(this["BuildVersion"]));
             }
             set {
                 this["BuildVersion"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("TRUE")]
+        public string CheckUpdate {
+            get {
+                return ((string)(this["CheckUpdate"]));
+            }
+            set {
+                this["CheckUpdate"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string UpdateReady {
+            get {
+                return ((string)(this["UpdateReady"]));
+            }
+            set {
+                this["UpdateReady"] = value;
             }
         }
     }
