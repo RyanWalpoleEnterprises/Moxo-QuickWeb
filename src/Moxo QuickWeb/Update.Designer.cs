@@ -68,6 +68,7 @@
             // StartExecute
             // 
             this.StartExecute.Interval = 3000;
+            this.StartExecute.Tick += new System.EventHandler(this.StartExecute_Tick);
             // 
             // pictureBox1
             // 
