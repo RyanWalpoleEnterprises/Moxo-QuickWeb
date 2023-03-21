@@ -68,9 +68,9 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Preview_Forward)).BeginInit();
@@ -81,7 +81,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // SettingsSettings
@@ -495,24 +495,13 @@
             // 
             this.panel1.BackgroundImage = global::Moxo_QuickWeb.Properties.Resources.MoxoBackground_Color;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Controls.Add(this.pictureBox5);
+            this.panel1.Controls.Add(this.pictureBox4);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.label11);
             this.panel1.Location = new System.Drawing.Point(-3, -6);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(950, 103);
             this.panel1.TabIndex = 31;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox5.Image = global::Moxo_QuickWeb.Properties.Resources.MoxoLogoFullWhite;
-            this.pictureBox5.Location = new System.Drawing.Point(737, 22);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(156, 63);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 32;
-            this.pictureBox5.TabStop = false;
             // 
             // label10
             // 
@@ -535,6 +524,17 @@
             this.label11.Size = new System.Drawing.Size(334, 42);
             this.label11.TabIndex = 27;
             this.label11.Text = "Create New Web App";
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox4.Image = global::Moxo_QuickWeb.Properties.Resources.MoxoQWSWhiteFullLogo;
+            this.pictureBox4.Location = new System.Drawing.Point(647, 22);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(246, 63);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 37;
+            this.pictureBox4.TabStop = false;
             // 
             // NewDotNET
             // 
@@ -584,7 +584,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -625,12 +625,12 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button CancelButton;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox dotNetLink;
         private System.Windows.Forms.PictureBox Preview_Back;
         private System.Windows.Forms.PictureBox Preview_Refresh;
         private System.Windows.Forms.PictureBox Preview_Forward;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.RichTextBox AppConfig;
+        private System.Windows.Forms.PictureBox pictureBox4;
     }
 }

@@ -42,7 +42,7 @@ namespace Moxo_QuickWeb
                 Directory.Delete(tmpdatafolder, true);
             }
 
-            Status.Text = "Starting QuickWeb...";
+            Status.Text = "Starting QuickWeb Studio...";
             StartApplication.Start();
         }
 

@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.IO.Compression;
@@ -131,18 +132,7 @@ namespace Moxo_QuickWeb
 
         private void CancelButton_Click(object sender, EventArgs e)
         {
-            DialogResult dr = MessageBox.Show("Are you sure you want to abandon your progress?", "New dotLX Project | Moxo QuickWeb Studio", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (dr == DialogResult.Yes)
-            {
-                Dashboard db = new Dashboard();
-                db.Show();
-
-                this.Close();
-            }
-            else
-            {
-                //
-            }
+            this.Close();
         }
 
         private void ApplicationWindowHeight_KeyPress(object sender, KeyPressEventArgs e)
@@ -177,7 +167,24 @@ namespace Moxo_QuickWeb
 
         private void NewdotLX_FormClosing(object sender, FormClosingEventArgs e)
         {
-            CancelButton.PerformClick();
+            string appdatadir = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+            string userdatadir = appdatadir + @"\RWE\Moxo\QuickWeb\";
+            string tmpdatafolder = userdatadir + @"tmp\";
+            string propertiesdir = tmpdatafolder + @"\Moxo Web UI\Properties\";
+            string appconfig = tmpdatafolder + @"\Moxo Web UI\App.config";
+
+            DialogResult dr = MessageBox.Show("Are you sure you want to abandon your progress?", "New dotLX Project | Moxo QuickWeb Studio", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dr == DialogResult.Yes)
+            {
+                Dashboard db = new Dashboard();
+                db.Show();
+
+                this.Close();
+            }
+            else
+            {
+                //
+            }
         }
 
         private void IconBrowse_Click(object sender, EventArgs e)
@@ -291,6 +298,11 @@ namespace Moxo_QuickWeb
             DummyCleanup.Stop();
             Directory.Delete(tmpdatafolder, true);
             Application.Exit();
+        }
+
+        private void dotNetLink_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://github.com/RyanWalpoleEnterprises/Moxo-QuickWeb/wiki/QuickWeb-dotLX");
         }
     }
 }

@@ -19,39 +19,51 @@ namespace Moxo_QuickWeb
         {
             InitializeComponent();
             Version.Text = "Version: " + Properties.Settings.Default.Version + "(" + Properties.Settings.Default.BuildVersion + ")";
+
+            if(Properties.Settings.Default.CheckUpdate == "TRUE")
+            {
+                UpdateCheck.RunWorkerAsync();
+            }
         }
 
         private void CheckForUpdates_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            CheckForUpdates.Text = "Checking for updates...";
-            string CurrentUpdateVersion = "https://raw.githubusercontent.com/RyanWalpoleEnterprises/Moxo-QuickWeb/main/installer/cver.txt";
+            try
+            {
+                CheckForUpdates.Text = "Checking for updates...";
+                string CurrentUpdateVersion = "https://raw.githubusercontent.com/RyanWalpoleEnterprises/Moxo-QuickWeb/main/installer/cver.txt";
 
-            //View current stable version number
-            WebClient client = new WebClient();
-            client.Proxy = null;
-            Stream stream = client.OpenRead(CurrentUpdateVersion);
-            StreamReader reader = new StreamReader(stream);
-            String CVER = reader.ReadToEnd();
-            
-            if(CVER == Properties.Settings.Default.Version)
-            {
-                //Current version matches the web's most up to date version
-                CheckForUpdates.Text = "No updates available.";
+                //View current stable version number
+                WebClient client = new WebClient();
+                client.Proxy = null;
+                Stream stream = client.OpenRead(CurrentUpdateVersion);
+                StreamReader reader = new StreamReader(stream);
+                String CVER = reader.ReadToEnd();
+
+                if (CVER.Contains(Properties.Settings.Default.Version))
+                {
+                    Properties.Settings.Default.UpdateReady = "FALSE";
+                }
+                else if (!CVER.Contains(Properties.Settings.Default.Version))
+                {
+                    Properties.Settings.Default.UpdateReady = "TRUE";
+                    CheckForUpdates.Text = "Updates available";
+                    DialogResult result = MessageBox.Show("Moxo QuickWeb Studio has available updates. Would you like to download and install these updates now?", "Moxo QuickWeb Studio", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (result == DialogResult.Yes)
+                    {
+                        Update update = new Update();
+                        update.ShowDialog();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        //
+                    }
+                }
             }
-            else
+            catch
             {
-                CheckForUpdates.Text = "Updates available.";
-                DialogResult result = MessageBox.Show("Moxo QuickWeb Studio has available updates. Would you like to download and install these updates now?","Moxo QuickWeb Studio",MessageBoxButtons.YesNo,MessageBoxIcon.Question);
-                if(result == DialogResult.Yes)
-                {
-                    Update update = new Update();
-                    update.ShowDialog();
-                    this.Hide();
-                }
-                else
-                {
-                    //
-                }
+
             }
         }
 
@@ -82,6 +94,56 @@ namespace Moxo_QuickWeb
             NewdotLX newproject = new NewdotLX();
             newproject.Show();
             this.Hide();
+        }
+
+        private void UpdateCheck_DoWork(object sender, DoWorkEventArgs e)
+        {
+            CheckForUpdates.Text = "Checking for updates...";
+            string CurrentUpdateVersion = "https://raw.githubusercontent.com/RyanWalpoleEnterprises/Moxo-QuickWeb/main/installer/cver.txt";
+
+            //View current stable version number
+            WebClient client = new WebClient();
+            client.Proxy = null;
+            Stream stream = client.OpenRead(CurrentUpdateVersion);
+            StreamReader reader = new StreamReader(stream);
+            String CVER = reader.ReadToEnd();
+
+            if (CVER.Contains(Properties.Settings.Default.Version))
+            {
+                Properties.Settings.Default.UpdateReady = "FALSE";
+            }
+            else if(!CVER.Contains(Properties.Settings.Default.Version))
+            {
+                Properties.Settings.Default.UpdateReady = "TRUE";
+            }
+        }
+
+        private void UpdateCheck_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            if(Properties.Settings.Default.UpdateReady == "TRUE")
+            {
+                CheckForUpdates.Text = "Updates available";
+                DialogResult result = MessageBox.Show("Moxo QuickWeb Studio has available updates. Would you like to download and install these updates now?", "Moxo QuickWeb Studio", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    Update update = new Update();
+                    update.ShowDialog();
+                    this.Hide();
+                }
+                else
+                {
+                    //
+                }
+            }
+            else if(Properties.Settings.Default.UpdateReady == "FALSE")
+            {
+                CheckForUpdates.Text = "No updates available";
+            }
+        }
+
+        private void IssueReport_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start("https://github.com/RyanWalpoleEnterprises/Moxo-QuickWeb/issues");
         }
     }
 }

@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "Moxo QuickWeb Studio"
-#define MyAppVersion "230301"
+#define MyAppVersion "230302"
 #define MyAppPublisher "Ryan Walpole Enterprises"
 #define MyAppURL "https://ryanwalpole.com/developer/moxo"
 #define MyAppExeName "Moxo QuickWeb.exe"
@@ -34,6 +34,8 @@ SetupIconFile=C:\Users\rwalpole\Downloads\MoxoIcon.ico
 Compression=lzma
 SolidCompression=yes
 WizardStyle=modern
+UninstallDisplayIcon={app}\{#MyAppExeName}
+UninstallDisplayName=Moxo QuickWeb Studio
 
 [Languages]
 Name: "english"; MessagesFile: "compiler:Default.isl"
