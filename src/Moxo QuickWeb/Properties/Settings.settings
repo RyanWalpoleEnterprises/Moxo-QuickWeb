@@ -9,7 +9,7 @@
       <Value Profile="(Default)" />
     </Setting>
     <Setting Name="BuildVersion" Type="System.String" Scope="User">
-      <Value Profile="(Default)">01101703P</Value>
+      <Value Profile="(Default)">01502103P</Value>
     </Setting>
     <Setting Name="CheckUpdate" Type="System.String" Scope="User">
       <Value Profile="(Default)">TRUE</Value>
