@@ -38,6 +38,7 @@
             this.DocsDotNet = new System.Windows.Forms.Button();
             this.DocsDotLX = new System.Windows.Forms.Button();
             this.Version = new System.Windows.Forms.Label();
+            this.UpdateCheck = new System.ComponentModel.BackgroundWorker();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -45,7 +46,6 @@
             this.Settings = new System.Windows.Forms.LinkLabel();
             this.CheckForUpdates = new System.Windows.Forms.LinkLabel();
             this.IssueReport = new System.Windows.Forms.LinkLabel();
-            this.UpdateCheck = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
@@ -144,6 +144,11 @@
             this.Version.Text = "Version: ";
             this.Version.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // UpdateCheck
+            // 
+            this.UpdateCheck.DoWork += new System.ComponentModel.DoWorkEventHandler(this.UpdateCheck_DoWork);
+            this.UpdateCheck.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.UpdateCheck_RunWorkerCompleted);
+            // 
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
@@ -204,6 +209,7 @@
             this.Settings.TabStop = true;
             this.Settings.Text = "Settings";
             this.Settings.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Settings.Visible = false;
             // 
             // CheckForUpdates
             // 
@@ -236,11 +242,6 @@
             this.IssueReport.Text = "Give Feedback or Report Issues";
             this.IssueReport.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.IssueReport.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.IssueReport_LinkClicked);
-            // 
-            // UpdateCheck
-            // 
-            this.UpdateCheck.DoWork += new System.ComponentModel.DoWorkEventHandler(this.UpdateCheck_DoWork);
-            this.UpdateCheck.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.UpdateCheck_RunWorkerCompleted);
             // 
             // Dashboard
             // 
