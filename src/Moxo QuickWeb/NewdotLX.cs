@@ -178,8 +178,6 @@ namespace Moxo_QuickWeb
             {
                 Dashboard db = new Dashboard();
                 db.Show();
-
-                this.Close();
             }
             else
             {
