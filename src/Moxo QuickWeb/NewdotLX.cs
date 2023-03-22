@@ -8,6 +8,7 @@ using System.Drawing;
 using System.IO;
 using System.IO.Compression;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -41,6 +42,17 @@ namespace Moxo_QuickWeb
                 MessageBox.Show(ex.Message);
             }
         }
+
+        [DllImport("urlmon.dll", CharSet = CharSet.Auto)]
+        private static extern uint FindMimeFromData(
+        uint pBC,
+        [MarshalAs(UnmanagedType.LPStr)] string pwzUrl,
+        [MarshalAs(UnmanagedType.LPArray)] byte[] pBuffer,
+        uint cbSize,
+        [MarshalAs(UnmanagedType.LPStr)] string pwzMimeProposed,
+        uint dwMimeFlags,
+        out uint ppwzMimeOut,
+        uint dwReserved);
 
         private void ApplicationName_Leave(object sender, EventArgs e)
         {
@@ -196,6 +208,39 @@ namespace Moxo_QuickWeb
                 iconFileName.Text = ofd.SafeFileName;
                 Properties.Settings.Default.dotLX_tmpICO = ofd.FileName;
                 Properties.Settings.Default.Save();
+
+                // Get the file path
+                string filePath = ofd.FileName;
+
+                // Read the first 256 bytes of the file into a buffer
+                byte[] buffer = new byte[256];
+                using (FileStream fs = new FileStream(filePath, FileMode.Open, FileAccess.Read))
+                {
+                    fs.Read(buffer, 0, 256);
+                }
+
+                // Determine the mime type using the FindMimeFromData function
+                uint mimeType;
+                FindMimeFromData(0, null, buffer, 256, null, 0, out mimeType, 0);
+
+                // Convert the mime type from a uint to a string
+                string mimeTypeString = Marshal.PtrToStringUni((IntPtr)mimeType);
+
+                // Parse the mime type
+                //MessageBox.Show(mimeTypeString);
+                if (String.IsNullOrWhiteSpace(mimeTypeString))
+                {
+                    //Cannot determine, assume safe.
+                }
+                else if (mimeTypeString.Contains("icon"))
+                {
+                    //Valid icon file
+                }
+                else if(!mimeTypeString.Contains("icon"))
+                {
+                    //Does not contain the correct mime type
+                    MessageBox.Show("The ico file you selected reported a MIME file type of " + mimeTypeString + "." + Environment.NewLine + Environment.NewLine + "This may not be a valid icon file and may cause issues in your application.", "Warning | Moxo QuickWeb Studio [dotLX]", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
         }
 
@@ -301,6 +346,23 @@ namespace Moxo_QuickWeb
         private void dotNetLink_Click(object sender, EventArgs e)
         {
             Process.Start("https://github.com/RyanWalpoleEnterprises/Moxo-QuickWeb/wiki/QuickWeb-dotLX");
+        }
+
+        private void IconLearnMore_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start("https://github.com/RyanWalpoleEnterprises/Moxo-QuickWeb/wiki/%5BdotLX%5D-Creating-a-New-Project-%5BCustomisation-Options%5D#custom-icon-support");
+        }
+
+        private void IconPNGConvert_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            DialogResult dr = MessageBox.Show("We recommend using CloudConvert to convert your PNG to ICO. Would you like to open CloudConvert in your browser?", "PNG to ICO Conversion | Moxo QuickWeb Studio [dotLX]", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dr == DialogResult.Yes) {
+                Process.Start("https://cloudconvert.com/png-to-ico");
+                    }
+            else
+            {
+                //do nothing
+            }
         }
     }
 }
