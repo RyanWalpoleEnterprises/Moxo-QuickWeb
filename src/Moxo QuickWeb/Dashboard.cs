@@ -28,9 +28,16 @@ namespace Moxo_QuickWeb
 
         private void CheckForUpdates_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            CheckForUpdates.Text = "Checking for updates...";
+
+            DelayUpdateCheck.Start();
+        }
+
+        private void DelayUpdateCheck_Tick(object sender, EventArgs e)
+        {
+            DelayUpdateCheck.Stop();
             try
             {
-                CheckForUpdates.Text = "Checking for updates...";
                 string CurrentUpdateVersion = "https://raw.githubusercontent.com/RyanWalpoleEnterprises/Moxo-QuickWeb/main/installer/cver.txt";
 
                 //View current stable version number
@@ -43,6 +50,7 @@ namespace Moxo_QuickWeb
                 if (CVER.Contains(Properties.Settings.Default.Version))
                 {
                     Properties.Settings.Default.UpdateReady = "FALSE";
+                    CheckForUpdates.Text = "No updates available";
                 }
                 else if (!CVER.Contains(Properties.Settings.Default.Version))
                 {
@@ -63,7 +71,8 @@ namespace Moxo_QuickWeb
             }
             catch
             {
-
+                Properties.Settings.Default.UpdateReady = "FALSE";
+                CheckForUpdates.Text = "Couldn't connect to update server";
             }
         }
 
@@ -145,5 +154,6 @@ namespace Moxo_QuickWeb
         {
             Process.Start("https://github.com/RyanWalpoleEnterprises/Moxo-QuickWeb/issues");
         }
+
     }
 }

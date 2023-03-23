@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -39,6 +40,7 @@
             this.DocsDotLX = new System.Windows.Forms.Button();
             this.Version = new System.Windows.Forms.Label();
             this.UpdateCheck = new System.ComponentModel.BackgroundWorker();
+            this.DelayUpdateCheck = new System.Windows.Forms.Timer(this.components);
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -149,6 +151,11 @@
             this.UpdateCheck.DoWork += new System.ComponentModel.DoWorkEventHandler(this.UpdateCheck_DoWork);
             this.UpdateCheck.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.UpdateCheck_RunWorkerCompleted);
             // 
+            // DelayUpdateCheck
+            // 
+            this.DelayUpdateCheck.Interval = 2512;
+            this.DelayUpdateCheck.Tick += new System.EventHandler(this.DelayUpdateCheck_Tick);
+            // 
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
@@ -187,10 +194,10 @@
             // pictureBox4
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox4.Image = global::Moxo_QuickWeb.Properties.Resources.MoxoQWSWhiteFullLogo;
-            this.pictureBox4.Location = new System.Drawing.Point(21, 83);
+            this.pictureBox4.Image = global::Moxo_QuickWeb.Properties.Resources.MoxoQWSStacked;
+            this.pictureBox4.Location = new System.Drawing.Point(15, 46);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(287, 55);
+            this.pictureBox4.Size = new System.Drawing.Size(209, 95);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 13;
             this.pictureBox4.TabStop = false;
@@ -202,9 +209,9 @@
             this.Settings.Font = new System.Drawing.Font("Segoe UI", 8F);
             this.Settings.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.Settings.LinkColor = System.Drawing.Color.White;
-            this.Settings.Location = new System.Drawing.Point(387, 88);
+            this.Settings.Location = new System.Drawing.Point(317, 87);
             this.Settings.Name = "Settings";
-            this.Settings.Size = new System.Drawing.Size(153, 19);
+            this.Settings.Size = new System.Drawing.Size(223, 19);
             this.Settings.TabIndex = 12;
             this.Settings.TabStop = true;
             this.Settings.Text = "Settings";
@@ -218,9 +225,9 @@
             this.CheckForUpdates.Font = new System.Drawing.Font("Segoe UI", 8F);
             this.CheckForUpdates.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.CheckForUpdates.LinkColor = System.Drawing.Color.White;
-            this.CheckForUpdates.Location = new System.Drawing.Point(387, 104);
+            this.CheckForUpdates.Location = new System.Drawing.Point(314, 103);
             this.CheckForUpdates.Name = "CheckForUpdates";
-            this.CheckForUpdates.Size = new System.Drawing.Size(153, 19);
+            this.CheckForUpdates.Size = new System.Drawing.Size(226, 19);
             this.CheckForUpdates.TabIndex = 10;
             this.CheckForUpdates.TabStop = true;
             this.CheckForUpdates.Text = "Check for Updates";
@@ -234,9 +241,9 @@
             this.IssueReport.Font = new System.Drawing.Font("Segoe UI", 8F);
             this.IssueReport.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.IssueReport.LinkColor = System.Drawing.Color.White;
-            this.IssueReport.Location = new System.Drawing.Point(366, 119);
+            this.IssueReport.Location = new System.Drawing.Point(320, 118);
             this.IssueReport.Name = "IssueReport";
-            this.IssueReport.Size = new System.Drawing.Size(174, 19);
+            this.IssueReport.Size = new System.Drawing.Size(220, 19);
             this.IssueReport.TabIndex = 11;
             this.IssueReport.TabStop = true;
             this.IssueReport.Text = "Give Feedback or Report Issues";
@@ -245,8 +252,8 @@
             // 
             // Dashboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(545, 498);
             this.Controls.Add(this.Version);
@@ -296,5 +303,6 @@
         private System.Windows.Forms.LinkLabel Settings;
         private System.Windows.Forms.PictureBox pictureBox4;
         public System.ComponentModel.BackgroundWorker UpdateCheck;
+        private System.Windows.Forms.Timer DelayUpdateCheck;
     }
 }

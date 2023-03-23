@@ -45,6 +45,7 @@
             this.ApplicationWindowWidth = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.IconLearnMore = new System.Windows.Forms.LinkLabel();
             this.iconFileName = new System.Windows.Forms.Label();
             this.IconBrowse = new System.Windows.Forms.Button();
             this.label15 = new System.Windows.Forms.Label();
@@ -59,23 +60,23 @@
             this.Tabs = new System.Windows.Forms.TabControl();
             this.PreviewVisual = new System.Windows.Forms.TabPage();
             this.label13 = new System.Windows.Forms.Label();
+            this.Preview_Forward = new System.Windows.Forms.PictureBox();
+            this.Preview_Refresh = new System.Windows.Forms.PictureBox();
+            this.Preview_Back = new System.Windows.Forms.PictureBox();
             this.Preview_Height = new System.Windows.Forms.Label();
             this.Preview_Width = new System.Windows.Forms.Label();
             this.Preview_URL = new System.Windows.Forms.Label();
             this.Preview_Title = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Assembly = new System.Windows.Forms.RichTextBox();
             this.SettingsVisual = new System.Windows.Forms.RichTextBox();
             this.SettingsSettings = new System.Windows.Forms.RichTextBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.AppConfig = new System.Windows.Forms.RichTextBox();
             this.PreviewCode = new System.Windows.Forms.TabPage();
             this.CodeFile = new System.Windows.Forms.RichTextBox();
             this.DummyCleanup = new System.Windows.Forms.Timer(this.components);
-            this.Preview_Forward = new System.Windows.Forms.PictureBox();
-            this.Preview_Refresh = new System.Windows.Forms.PictureBox();
-            this.Preview_Back = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.CancelButton = new System.Windows.Forms.Button();
             this.ContinueButton = new System.Windows.Forms.Button();
             this.dotNetLink = new System.Windows.Forms.PictureBox();
@@ -83,17 +84,18 @@
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.IconPNGConvert = new System.Windows.Forms.LinkLabel();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.Tabs.SuspendLayout();
             this.PreviewVisual.SuspendLayout();
-            this.PreviewCode.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Preview_Forward)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Preview_Refresh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Preview_Back)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.PreviewCode.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dotNetLink)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -123,9 +125,9 @@
             this.groupBox2.Controls.Add(this.ApplicationWindowWidth);
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F);
-            this.groupBox2.Location = new System.Drawing.Point(12, 337);
+            this.groupBox2.Location = new System.Drawing.Point(12, 344);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(376, 205);
+            this.groupBox2.Size = new System.Drawing.Size(376, 214);
             this.groupBox2.TabIndex = 39;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Web-App Customisation";
@@ -272,6 +274,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.IconPNGConvert);
+            this.groupBox1.Controls.Add(this.IconLearnMore);
             this.groupBox1.Controls.Add(this.iconFileName);
             this.groupBox1.Controls.Add(this.IconBrowse);
             this.groupBox1.Controls.Add(this.label15);
@@ -286,10 +290,22 @@
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F);
             this.groupBox1.Location = new System.Drawing.Point(12, 150);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(376, 169);
+            this.groupBox1.Size = new System.Drawing.Size(376, 181);
             this.groupBox1.TabIndex = 38;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Application Information";
+            // 
+            // IconLearnMore
+            // 
+            this.IconLearnMore.Font = new System.Drawing.Font("Segoe UI", 7F);
+            this.IconLearnMore.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.IconLearnMore.Location = new System.Drawing.Point(17, 154);
+            this.IconLearnMore.Name = "IconLearnMore";
+            this.IconLearnMore.Size = new System.Drawing.Size(73, 13);
+            this.IconLearnMore.TabIndex = 11;
+            this.IconLearnMore.TabStop = true;
+            this.IconLearnMore.Text = "Learn More";
+            this.IconLearnMore.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.IconLearnMore_LinkClicked);
             // 
             // iconFileName
             // 
@@ -414,7 +430,7 @@
             this.Tabs.Location = new System.Drawing.Point(407, 110);
             this.Tabs.Name = "Tabs";
             this.Tabs.SelectedIndex = 0;
-            this.Tabs.Size = new System.Drawing.Size(496, 432);
+            this.Tabs.Size = new System.Drawing.Size(496, 448);
             this.Tabs.TabIndex = 40;
             // 
             // PreviewVisual
@@ -438,7 +454,7 @@
             this.PreviewVisual.Location = new System.Drawing.Point(4, 22);
             this.PreviewVisual.Name = "PreviewVisual";
             this.PreviewVisual.Padding = new System.Windows.Forms.Padding(3);
-            this.PreviewVisual.Size = new System.Drawing.Size(488, 406);
+            this.PreviewVisual.Size = new System.Drawing.Size(488, 422);
             this.PreviewVisual.TabIndex = 0;
             this.PreviewVisual.Text = "Visual Preview";
             // 
@@ -447,18 +463,48 @@
             this.label13.BackColor = System.Drawing.Color.White;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F, System.Drawing.FontStyle.Italic);
             this.label13.ForeColor = System.Drawing.Color.DarkGray;
-            this.label13.Location = new System.Drawing.Point(29, 346);
+            this.label13.Location = new System.Drawing.Point(30, 363);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(209, 30);
             this.label13.TabIndex = 50;
             this.label13.Text = "Preview designed only to give context to configuration values.";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // Preview_Forward
+            // 
+            this.Preview_Forward.Image = global::Moxo_QuickWeb.Properties.Resources.MoxoForwardPreview;
+            this.Preview_Forward.Location = new System.Drawing.Point(150, 141);
+            this.Preview_Forward.Name = "Preview_Forward";
+            this.Preview_Forward.Size = new System.Drawing.Size(62, 21);
+            this.Preview_Forward.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Preview_Forward.TabIndex = 49;
+            this.Preview_Forward.TabStop = false;
+            // 
+            // Preview_Refresh
+            // 
+            this.Preview_Refresh.Image = global::Moxo_QuickWeb.Properties.Resources.MoxoRefreshPreview;
+            this.Preview_Refresh.Location = new System.Drawing.Point(88, 141);
+            this.Preview_Refresh.Name = "Preview_Refresh";
+            this.Preview_Refresh.Size = new System.Drawing.Size(67, 21);
+            this.Preview_Refresh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Preview_Refresh.TabIndex = 48;
+            this.Preview_Refresh.TabStop = false;
+            // 
+            // Preview_Back
+            // 
+            this.Preview_Back.Image = global::Moxo_QuickWeb.Properties.Resources.MoxoBackPreview;
+            this.Preview_Back.Location = new System.Drawing.Point(39, 141);
+            this.Preview_Back.Name = "Preview_Back";
+            this.Preview_Back.Size = new System.Drawing.Size(54, 21);
+            this.Preview_Back.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Preview_Back.TabIndex = 47;
+            this.Preview_Back.TabStop = false;
+            // 
             // Preview_Height
             // 
             this.Preview_Height.BackColor = System.Drawing.Color.White;
             this.Preview_Height.ForeColor = System.Drawing.Color.Black;
-            this.Preview_Height.Location = new System.Drawing.Point(409, 205);
+            this.Preview_Height.Location = new System.Drawing.Point(410, 222);
             this.Preview_Height.Name = "Preview_Height";
             this.Preview_Height.Size = new System.Drawing.Size(66, 24);
             this.Preview_Height.TabIndex = 46;
@@ -469,7 +515,7 @@
             // 
             this.Preview_Width.BackColor = System.Drawing.Color.White;
             this.Preview_Width.ForeColor = System.Drawing.Color.Black;
-            this.Preview_Width.Location = new System.Drawing.Point(104, 16);
+            this.Preview_Width.Location = new System.Drawing.Point(105, 33);
             this.Preview_Width.Name = "Preview_Width";
             this.Preview_Width.Size = new System.Drawing.Size(189, 24);
             this.Preview_Width.TabIndex = 45;
@@ -480,7 +526,7 @@
             // 
             this.Preview_URL.BackColor = System.Drawing.Color.White;
             this.Preview_URL.ForeColor = System.Drawing.Color.Gray;
-            this.Preview_URL.Location = new System.Drawing.Point(42, 213);
+            this.Preview_URL.Location = new System.Drawing.Point(43, 230);
             this.Preview_URL.Name = "Preview_URL";
             this.Preview_URL.Size = new System.Drawing.Size(307, 30);
             this.Preview_URL.TabIndex = 42;
@@ -490,15 +536,25 @@
             // Preview_Title
             // 
             this.Preview_Title.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.Preview_Title.Location = new System.Drawing.Point(37, 101);
+            this.Preview_Title.Location = new System.Drawing.Point(38, 118);
             this.Preview_Title.Name = "Preview_Title";
             this.Preview_Title.Size = new System.Drawing.Size(310, 17);
             this.Preview_Title.TabIndex = 41;
             this.Preview_Title.Text = "Application Name";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Moxo_QuickWeb.Properties.Resources.MoxoBlankWindowOutlined;
+            this.pictureBox1.Location = new System.Drawing.Point(33, 102);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(332, 265);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 40;
+            this.pictureBox1.TabStop = false;
+            // 
             // Assembly
             // 
-            this.Assembly.Location = new System.Drawing.Point(233, 297);
+            this.Assembly.Location = new System.Drawing.Point(234, 314);
             this.Assembly.Name = "Assembly";
             this.Assembly.Size = new System.Drawing.Size(31, 15);
             this.Assembly.TabIndex = 39;
@@ -507,7 +563,7 @@
             // 
             // SettingsVisual
             // 
-            this.SettingsVisual.Location = new System.Drawing.Point(267, 297);
+            this.SettingsVisual.Location = new System.Drawing.Point(268, 314);
             this.SettingsVisual.Name = "SettingsVisual";
             this.SettingsVisual.Size = new System.Drawing.Size(33, 15);
             this.SettingsVisual.TabIndex = 38;
@@ -516,16 +572,36 @@
             // 
             // SettingsSettings
             // 
-            this.SettingsSettings.Location = new System.Drawing.Point(229, 297);
+            this.SettingsSettings.Location = new System.Drawing.Point(230, 314);
             this.SettingsSettings.Name = "SettingsSettings";
             this.SettingsSettings.Size = new System.Drawing.Size(31, 15);
             this.SettingsSettings.TabIndex = 37;
             this.SettingsSettings.Text = "";
             this.SettingsSettings.Visible = false;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Moxo_QuickWeb.Properties.Resources.MoxoBracketHeightThin;
+            this.pictureBox2.Location = new System.Drawing.Point(346, 117);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(78, 235);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 43;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::Moxo_QuickWeb.Properties.Resources.MoxoBracketWidthThin;
+            this.pictureBox3.Location = new System.Drawing.Point(33, 41);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(332, 87);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 44;
+            this.pictureBox3.TabStop = false;
+            // 
             // AppConfig
             // 
-            this.AppConfig.Location = new System.Drawing.Point(306, 297);
+            this.AppConfig.Location = new System.Drawing.Point(307, 314);
             this.AppConfig.Name = "AppConfig";
             this.AppConfig.Size = new System.Drawing.Size(33, 15);
             this.AppConfig.TabIndex = 51;
@@ -538,7 +614,7 @@
             this.PreviewCode.Location = new System.Drawing.Point(4, 22);
             this.PreviewCode.Name = "PreviewCode";
             this.PreviewCode.Padding = new System.Windows.Forms.Padding(3);
-            this.PreviewCode.Size = new System.Drawing.Size(488, 406);
+            this.PreviewCode.Size = new System.Drawing.Size(488, 432);
             this.PreviewCode.TabIndex = 1;
             this.PreviewCode.Text = "Code Preview";
             this.PreviewCode.UseVisualStyleBackColor = true;
@@ -551,7 +627,7 @@
             this.CodeFile.Location = new System.Drawing.Point(3, 3);
             this.CodeFile.Name = "CodeFile";
             this.CodeFile.ReadOnly = true;
-            this.CodeFile.Size = new System.Drawing.Size(482, 400);
+            this.CodeFile.Size = new System.Drawing.Size(482, 426);
             this.CodeFile.TabIndex = 0;
             this.CodeFile.Text = resources.GetString("CodeFile.Text");
             this.CodeFile.WordWrap = false;
@@ -561,71 +637,11 @@
             this.DummyCleanup.Interval = 125;
             this.DummyCleanup.Tick += new System.EventHandler(this.DummyCleanup_Tick);
             // 
-            // Preview_Forward
-            // 
-            this.Preview_Forward.Image = global::Moxo_QuickWeb.Properties.Resources.MoxoForwardPreview;
-            this.Preview_Forward.Location = new System.Drawing.Point(149, 124);
-            this.Preview_Forward.Name = "Preview_Forward";
-            this.Preview_Forward.Size = new System.Drawing.Size(62, 21);
-            this.Preview_Forward.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Preview_Forward.TabIndex = 49;
-            this.Preview_Forward.TabStop = false;
-            // 
-            // Preview_Refresh
-            // 
-            this.Preview_Refresh.Image = global::Moxo_QuickWeb.Properties.Resources.MoxoRefreshPreview;
-            this.Preview_Refresh.Location = new System.Drawing.Point(87, 124);
-            this.Preview_Refresh.Name = "Preview_Refresh";
-            this.Preview_Refresh.Size = new System.Drawing.Size(67, 21);
-            this.Preview_Refresh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Preview_Refresh.TabIndex = 48;
-            this.Preview_Refresh.TabStop = false;
-            // 
-            // Preview_Back
-            // 
-            this.Preview_Back.Image = global::Moxo_QuickWeb.Properties.Resources.MoxoBackPreview;
-            this.Preview_Back.Location = new System.Drawing.Point(38, 124);
-            this.Preview_Back.Name = "Preview_Back";
-            this.Preview_Back.Size = new System.Drawing.Size(54, 21);
-            this.Preview_Back.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Preview_Back.TabIndex = 47;
-            this.Preview_Back.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Moxo_QuickWeb.Properties.Resources.MoxoBlankWindowOutlined;
-            this.pictureBox1.Location = new System.Drawing.Point(32, 85);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(332, 265);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 40;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::Moxo_QuickWeb.Properties.Resources.MoxoBracketHeightThin;
-            this.pictureBox2.Location = new System.Drawing.Point(345, 100);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(78, 235);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 43;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::Moxo_QuickWeb.Properties.Resources.MoxoBracketWidthThin;
-            this.pictureBox3.Location = new System.Drawing.Point(32, 24);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(332, 87);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 44;
-            this.pictureBox3.TabStop = false;
-            // 
             // CancelButton
             // 
             this.CancelButton.Image = global::Moxo_QuickWeb.Properties.Resources.file_cancel__Custom___1_;
             this.CancelButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.CancelButton.Location = new System.Drawing.Point(676, 551);
+            this.CancelButton.Location = new System.Drawing.Point(676, 567);
             this.CancelButton.Name = "CancelButton";
             this.CancelButton.Size = new System.Drawing.Size(87, 44);
             this.CancelButton.TabIndex = 36;
@@ -639,7 +655,7 @@
             // 
             this.ContinueButton.Image = global::Moxo_QuickWeb.Properties.Resources.check_circle__Custom_;
             this.ContinueButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.ContinueButton.Location = new System.Drawing.Point(770, 551);
+            this.ContinueButton.Location = new System.Drawing.Point(770, 567);
             this.ContinueButton.Name = "ContinueButton";
             this.ContinueButton.Size = new System.Drawing.Size(129, 44);
             this.ContinueButton.TabIndex = 37;
@@ -678,9 +694,9 @@
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox5.Image = global::Moxo_QuickWeb.Properties.Resources.MoxoQWSWhiteFullLogo;
-            this.pictureBox5.Location = new System.Drawing.Point(647, 22);
+            this.pictureBox5.Location = new System.Drawing.Point(680, 43);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(246, 63);
+            this.pictureBox5.Size = new System.Drawing.Size(213, 42);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox5.TabIndex = 32;
             this.pictureBox5.TabStop = false;
@@ -707,12 +723,24 @@
             this.label11.TabIndex = 27;
             this.label11.Text = "Create New Web App";
             // 
+            // IconPNGConvert
+            // 
+            this.IconPNGConvert.Font = new System.Drawing.Font("Segoe UI", 7F);
+            this.IconPNGConvert.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.IconPNGConvert.Location = new System.Drawing.Point(128, 154);
+            this.IconPNGConvert.Name = "IconPNGConvert";
+            this.IconPNGConvert.Size = new System.Drawing.Size(108, 13);
+            this.IconPNGConvert.TabIndex = 12;
+            this.IconPNGConvert.TabStop = true;
+            this.IconPNGConvert.Text = "Convert a PNG to ICO";
+            this.IconPNGConvert.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.IconPNGConvert_LinkClicked);
+            // 
             // NewdotLX
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(915, 607);
+            this.ClientSize = new System.Drawing.Size(915, 623);
             this.Controls.Add(this.Tabs);
             this.Controls.Add(this.CancelButton);
             this.Controls.Add(this.ContinueButton);
@@ -734,13 +762,13 @@
             this.groupBox1.PerformLayout();
             this.Tabs.ResumeLayout(false);
             this.PreviewVisual.ResumeLayout(false);
-            this.PreviewCode.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Preview_Forward)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Preview_Refresh)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Preview_Back)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.PreviewCode.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dotNetLink)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
@@ -803,5 +831,7 @@
         private System.Windows.Forms.Button IconBrowse;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Timer DummyCleanup;
+        private System.Windows.Forms.LinkLabel IconLearnMore;
+        private System.Windows.Forms.LinkLabel IconPNGConvert;
     }
 }

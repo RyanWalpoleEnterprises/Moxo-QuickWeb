@@ -25,7 +25,7 @@ namespace Moxo_QuickWeb.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("230302")]
+        [global::System.Configuration.DefaultSettingValueAttribute("230303")]
         public string Version {
             get {
                 return ((string)(this["Version"]));
@@ -49,7 +49,7 @@ namespace Moxo_QuickWeb.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("01502103P")]
+        [global::System.Configuration.DefaultSettingValueAttribute("11312303P")]
         public string BuildVersion {
             get {
                 return ((string)(this["BuildVersion"]));
@@ -80,6 +80,30 @@ namespace Moxo_QuickWeb.Properties {
             }
             set {
                 this["UpdateReady"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string LaunchArg {
+            get {
+                return ((string)(this["LaunchArg"]));
+            }
+            set {
+                this["LaunchArg"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string CancelRoute {
+            get {
+                return ((string)(this["CancelRoute"]));
+            }
+            set {
+                this["CancelRoute"] = value;
             }
         }
     }

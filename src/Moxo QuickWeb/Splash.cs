@@ -19,9 +19,17 @@ namespace Moxo_QuickWeb
             InitializeComponent();
             string vertext  = "Version: " + Properties.Settings.Default.Version + "(" + Properties.Settings.Default.BuildVersion + ")";
             Version.Text = vertext;
-            CheckDirectories();
             Properties.Settings.Default.dotLX_tmpICO = null;
             Properties.Settings.Default.Save();
+
+            if (String.IsNullOrWhiteSpace(Properties.Settings.Default.LaunchArg))
+            {
+                CheckDirectories();
+            }
+            else
+            {
+                StartFileEditor.Start();
+            }
         }
 
         private void CheckDirectories()
@@ -51,6 +59,15 @@ namespace Moxo_QuickWeb
             StartApplication.Stop();
 
             Dashboard endpoint = new Dashboard();
+            endpoint.Show();
+            this.Hide();
+        }
+
+        private void StartFileEditor_Tick(object sender, EventArgs e)
+        {
+            StartFileEditor.Stop();
+
+            LXEditor endpoint = new LXEditor();
             endpoint.Show();
             this.Hide();
         }

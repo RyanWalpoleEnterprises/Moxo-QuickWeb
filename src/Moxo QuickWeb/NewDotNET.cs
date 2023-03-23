@@ -126,9 +126,19 @@ namespace Moxo_QuickWeb
             if(sfd.ShowDialog() == DialogResult.OK)
             {
                 string Saved = sfd.FileName;
-                ZipFile.CreateFromDirectory(tmpdatafolder, Saved);
-                MessageBox.Show("Congratulations. Your web-app is ready! To build and customise your web-app, extract the archive and open the project in Visual Studio. For more information and a step-by-step guide, visit https://github.com/RyanWalpoleEnterprises/Moxo-QuickWeb.");
-                Application.Exit();
+                try
+                {
+                    ZipFile.CreateFromDirectory(tmpdatafolder, Saved);
+                    MessageBox.Show("Congratulations. Your web-app is ready! To build and customise your web-app, extract the archive and open the project in Visual Studio. For more information and a step-by-step guide, visit https://github.com/RyanWalpoleEnterprises/Moxo-QuickWeb.");
+                    Properties.Settings.Default.CancelRoute = "FALSE";
+                    Application.Exit();
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show("MOXDTN117G: There was a problem saving your application: " + Environment.NewLine + Environment.NewLine + ex.Message);
+                    CancelButton.Enabled = true;
+                    ContinueButton.Enabled = true;
+                }
             }
         }
 
@@ -164,6 +174,7 @@ namespace Moxo_QuickWeb
 
         private void CancelButton_Click(object sender, EventArgs e)
         {
+            Properties.Settings.Default.CancelRoute = "TRUE";
             this.Close();
         }
 
@@ -180,17 +191,23 @@ namespace Moxo_QuickWeb
             string propertiesdir = tmpdatafolder + @"\Moxo Web UI\Properties\";
             string appconfig = tmpdatafolder + @"\Moxo Web UI\App.config";
 
-            DialogResult dr = MessageBox.Show("Are you sure you want to abandon your progress?", "New .NET Project | Moxo QuickWeb Studio", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (dr == DialogResult.Yes)
+            if(Properties.Settings.Default.CancelRoute == "TRUE")
             {
-                Dashboard db = new Dashboard();
-                db.Show();
-
-                this.Close();
+                DialogResult dr = MessageBox.Show("Are you sure you want to abandon your progress?", "New .NET Project | Moxo QuickWeb Studio", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dr == DialogResult.Yes)
+                {
+                    Properties.Settings.Default.CancelRoute = null;
+                    Dashboard db = new Dashboard();
+                    db.Show();
+                }
+                else
+                {
+                    //
+                }
             }
             else
             {
-                //
+                Properties.Settings.Default.CancelRoute = null;
             }
         }
     }

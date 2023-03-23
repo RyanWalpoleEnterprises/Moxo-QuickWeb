@@ -13,3 +13,22 @@ C:\Users\rwalpole\Documents\GitHub\Moxo-QuickWeb\src\Moxo QuickWeb\obj\Release\M
 C:\Users\rwalpole\Documents\GitHub\Moxo-QuickWeb\src\Moxo QuickWeb\obj\Release\Moxo_QuickWeb.NewDotNET.resources
 C:\Users\rwalpole\Documents\GitHub\Moxo-QuickWeb\src\Moxo QuickWeb\obj\Release\Moxo_QuickWeb.NewdotLX.resources
 C:\Users\rwalpole\Documents\GitHub\Moxo-QuickWeb\src\Moxo QuickWeb\obj\Release\Moxo_QuickWeb.Update.resources
+C:\Users\rwalpole\Documents\GitHub\Moxo-QuickWeb\src\Moxo QuickWeb\bin\Release\Syncfusion.Edit.Windows.dll
+C:\Users\rwalpole\Documents\GitHub\Moxo-QuickWeb\src\Moxo QuickWeb\bin\Release\Syncfusion.Grid.Base.dll
+C:\Users\rwalpole\Documents\GitHub\Moxo-QuickWeb\src\Moxo QuickWeb\bin\Release\Syncfusion.Grid.Windows.dll
+C:\Users\rwalpole\Documents\GitHub\Moxo-QuickWeb\src\Moxo QuickWeb\bin\Release\Syncfusion.Licensing.dll
+C:\Users\rwalpole\Documents\GitHub\Moxo-QuickWeb\src\Moxo QuickWeb\bin\Release\Syncfusion.Shared.Base.dll
+C:\Users\rwalpole\Documents\GitHub\Moxo-QuickWeb\src\Moxo QuickWeb\bin\Release\Syncfusion.Shared.Windows.dll
+C:\Users\rwalpole\Documents\GitHub\Moxo-QuickWeb\src\Moxo QuickWeb\bin\Release\Syncfusion.SpellChecker.Base.dll
+C:\Users\rwalpole\Documents\GitHub\Moxo-QuickWeb\src\Moxo QuickWeb\bin\Release\Syncfusion.Tools.Base.dll
+C:\Users\rwalpole\Documents\GitHub\Moxo-QuickWeb\src\Moxo QuickWeb\bin\Release\Syncfusion.Tools.Windows.dll
+C:\Users\rwalpole\Documents\GitHub\Moxo-QuickWeb\src\Moxo QuickWeb\bin\Release\Syncfusion.Edit.Windows.xml
+C:\Users\rwalpole\Documents\GitHub\Moxo-QuickWeb\src\Moxo QuickWeb\bin\Release\Syncfusion.Grid.Base.xml
+C:\Users\rwalpole\Documents\GitHub\Moxo-QuickWeb\src\Moxo QuickWeb\bin\Release\Syncfusion.Grid.Windows.xml
+C:\Users\rwalpole\Documents\GitHub\Moxo-QuickWeb\src\Moxo QuickWeb\bin\Release\Syncfusion.Shared.Base.xml
+C:\Users\rwalpole\Documents\GitHub\Moxo-QuickWeb\src\Moxo QuickWeb\bin\Release\Syncfusion.Shared.Windows.xml
+C:\Users\rwalpole\Documents\GitHub\Moxo-QuickWeb\src\Moxo QuickWeb\bin\Release\Syncfusion.SpellChecker.Base.xml
+C:\Users\rwalpole\Documents\GitHub\Moxo-QuickWeb\src\Moxo QuickWeb\bin\Release\Syncfusion.Tools.Base.xml
+C:\Users\rwalpole\Documents\GitHub\Moxo-QuickWeb\src\Moxo QuickWeb\bin\Release\Syncfusion.Tools.Windows.xml
+C:\Users\rwalpole\Documents\GitHub\Moxo-QuickWeb\src\Moxo QuickWeb\obj\Release\Moxo_QuickWeb.LXEditor.resources
+C:\Users\rwalpole\Documents\GitHub\Moxo-QuickWeb\src\Moxo QuickWeb\obj\Release\Moxo QuickWeb.csproj.CopyComplete

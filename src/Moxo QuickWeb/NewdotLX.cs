@@ -8,6 +8,7 @@ using System.Drawing;
 using System.IO;
 using System.IO.Compression;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -41,6 +42,17 @@ namespace Moxo_QuickWeb
                 MessageBox.Show(ex.Message);
             }
         }
+
+        [DllImport("urlmon.dll", CharSet = CharSet.Auto)]
+        private static extern uint FindMimeFromData(
+        uint pBC,
+        [MarshalAs(UnmanagedType.LPStr)] string pwzUrl,
+        [MarshalAs(UnmanagedType.LPArray)] byte[] pBuffer,
+        uint cbSize,
+        [MarshalAs(UnmanagedType.LPStr)] string pwzMimeProposed,
+        uint dwMimeFlags,
+        out uint ppwzMimeOut,
+        uint dwReserved);
 
         private void ApplicationName_Leave(object sender, EventArgs e)
         {
@@ -132,6 +144,7 @@ namespace Moxo_QuickWeb
 
         private void CancelButton_Click(object sender, EventArgs e)
         {
+            Properties.Settings.Default.CancelRoute = "TRUE";
             this.Close();
         }
 
@@ -173,18 +186,26 @@ namespace Moxo_QuickWeb
             string propertiesdir = tmpdatafolder + @"\Moxo Web UI\Properties\";
             string appconfig = tmpdatafolder + @"\Moxo Web UI\App.config";
 
-            DialogResult dr = MessageBox.Show("Are you sure you want to abandon your progress?", "New dotLX Project | Moxo QuickWeb Studio", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (dr == DialogResult.Yes)
+            if (Properties.Settings.Default.CancelRoute == "TRUE")
             {
-                Dashboard db = new Dashboard();
-                db.Show();
-
-                this.Close();
+                DialogResult dr = MessageBox.Show("Are you sure you want to abandon your progress?", "New dotLX Project | Moxo QuickWeb Studio", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dr == DialogResult.Yes)
+                {
+                    Properties.Settings.Default.CancelRoute = null;
+                    Dashboard db = new Dashboard();
+                    db.Show();
+                }
+                else
+                {
+                    //
+                }
             }
             else
             {
                 //
             }
+
+            Properties.Settings.Default.CancelRoute = null;
         }
 
         private void IconBrowse_Click(object sender, EventArgs e)
@@ -198,6 +219,39 @@ namespace Moxo_QuickWeb
                 iconFileName.Text = ofd.SafeFileName;
                 Properties.Settings.Default.dotLX_tmpICO = ofd.FileName;
                 Properties.Settings.Default.Save();
+
+                // Get the file path
+                string filePath = ofd.FileName;
+
+                // Read the first 256 bytes of the file into a buffer
+                byte[] buffer = new byte[256];
+                using (FileStream fs = new FileStream(filePath, FileMode.Open, FileAccess.Read))
+                {
+                    fs.Read(buffer, 0, 256);
+                }
+
+                // Determine the mime type using the FindMimeFromData function
+                uint mimeType;
+                FindMimeFromData(0, null, buffer, 256, null, 0, out mimeType, 0);
+
+                // Convert the mime type from a uint to a string
+                string mimeTypeString = Marshal.PtrToStringUni((IntPtr)mimeType);
+
+                // Parse the mime type
+                //MessageBox.Show(mimeTypeString);
+                if (String.IsNullOrWhiteSpace(mimeTypeString))
+                {
+                    //Cannot determine, assume safe.
+                }
+                else if (mimeTypeString.Contains("icon"))
+                {
+                    //Valid icon file
+                }
+                else if(!mimeTypeString.Contains("icon"))
+                {
+                    //Does not contain the correct mime type
+                    MessageBox.Show("The ico file you selected reported a MIME file type of " + mimeTypeString + "." + Environment.NewLine + Environment.NewLine + "This may not be a valid icon file and may cause issues in your application.", "Warning | Moxo QuickWeb Studio [dotLX]", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
         }
 
@@ -280,11 +334,20 @@ namespace Moxo_QuickWeb
             if (sfd.ShowDialog() == DialogResult.OK)
             {
                 string Saved = sfd.FileName;
-                ZipFile.CreateFromDirectory(tmpdatafolder, Saved);
-                DialogResult dr = MessageBox.Show("Your application has been built. We've saved it as a ZIP archive. To start using your application, simply unzip it and launch the executable.","Application Generated | Moxo QuickWeb Studio [dotLX]", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                if(dr == DialogResult.OK)
+                try
                 {
-                    DummyCleanup.Start();
+                    ZipFile.CreateFromDirectory(tmpdatafolder, Saved);
+                    DialogResult dr = MessageBox.Show("Your application has been built. We've saved it as a ZIP archive. To start using your application, simply unzip it and launch the executable.", "Application Generated | Moxo QuickWeb Studio [dotLX]", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    if (dr == DialogResult.OK)
+                    {
+                        DummyCleanup.Start();
+                    }
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show("MOXDLX113A: There was a problem saving your application: " + Environment.NewLine + Environment.NewLine + ex.Message);
+                    CancelButton.Enabled = true;
+                    ContinueButton.Enabled = true;
                 }
             }
         }
@@ -294,6 +357,7 @@ namespace Moxo_QuickWeb
             string appdatadir = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
             string userdatadir = appdatadir + @"\RWE\Moxo\QuickWeb\";
             string tmpdatafolder = userdatadir + @"tmp\";
+            Properties.Settings.Default.CancelRoute = "FALSE";
 
             DummyCleanup.Stop();
             Directory.Delete(tmpdatafolder, true);
@@ -303,6 +367,23 @@ namespace Moxo_QuickWeb
         private void dotNetLink_Click(object sender, EventArgs e)
         {
             Process.Start("https://github.com/RyanWalpoleEnterprises/Moxo-QuickWeb/wiki/QuickWeb-dotLX");
+        }
+
+        private void IconLearnMore_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start("https://github.com/RyanWalpoleEnterprises/Moxo-QuickWeb/wiki/%5BdotLX%5D-Creating-a-New-Project-%5BCustomisation-Options%5D#custom-icon-support");
+        }
+
+        private void IconPNGConvert_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            DialogResult dr = MessageBox.Show("We recommend using CloudConvert to convert your PNG to ICO. Would you like to open CloudConvert in your browser?", "PNG to ICO Conversion | Moxo QuickWeb Studio [dotLX]", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dr == DialogResult.Yes) {
+                Process.Start("https://cloudconvert.com/png-to-ico");
+                    }
+            else
+            {
+                //do nothing
+            }
         }
     }
 }
