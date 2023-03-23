@@ -9,7 +9,7 @@
       <Value Profile="(Default)" />
     </Setting>
     <Setting Name="BuildVersion" Type="System.String" Scope="User">
-      <Value Profile="(Default)">01022203P</Value>
+      <Value Profile="(Default)">11312303P</Value>
     </Setting>
     <Setting Name="CheckUpdate" Type="System.String" Scope="User">
       <Value Profile="(Default)">TRUE</Value>
@@ -18,6 +18,9 @@
       <Value Profile="(Default)" />
     </Setting>
     <Setting Name="LaunchArg" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="CancelRoute" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
   </Settings>
