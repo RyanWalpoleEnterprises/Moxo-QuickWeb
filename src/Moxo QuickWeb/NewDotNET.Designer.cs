@@ -68,9 +68,9 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Preview_Forward)).BeginInit();
@@ -503,6 +503,17 @@
             this.panel1.Size = new System.Drawing.Size(950, 103);
             this.panel1.TabIndex = 31;
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox4.Image = global::Moxo_QuickWeb.Properties.Resources.MoxoQWSWhiteFullLogo;
+            this.pictureBox4.Location = new System.Drawing.Point(680, 43);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(213, 42);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 37;
+            this.pictureBox4.TabStop = false;
+            // 
             // label10
             // 
             this.label10.BackColor = System.Drawing.Color.Transparent;
@@ -525,21 +536,10 @@
             this.label11.TabIndex = 27;
             this.label11.Text = "Create New Web App";
             // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox4.Image = global::Moxo_QuickWeb.Properties.Resources.MoxoQWSWhiteFullLogo;
-            this.pictureBox4.Location = new System.Drawing.Point(647, 22);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(246, 63);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 37;
-            this.pictureBox4.TabStop = false;
-            // 
             // NewDotNET
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(915, 526);
             this.Controls.Add(this.label14);
