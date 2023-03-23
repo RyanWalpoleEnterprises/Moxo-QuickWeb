@@ -144,6 +144,7 @@ namespace Moxo_QuickWeb
 
         private void CancelButton_Click(object sender, EventArgs e)
         {
+            Properties.Settings.Default.CancelRoute = "TRUE";
             this.Close();
         }
 
@@ -185,16 +186,26 @@ namespace Moxo_QuickWeb
             string propertiesdir = tmpdatafolder + @"\Moxo Web UI\Properties\";
             string appconfig = tmpdatafolder + @"\Moxo Web UI\App.config";
 
-            DialogResult dr = MessageBox.Show("Are you sure you want to abandon your progress?", "New dotLX Project | Moxo QuickWeb Studio", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (dr == DialogResult.Yes)
+            if (Properties.Settings.Default.CancelRoute == "TRUE")
             {
-                Dashboard db = new Dashboard();
-                db.Show();
+                DialogResult dr = MessageBox.Show("Are you sure you want to abandon your progress?", "New dotLX Project | Moxo QuickWeb Studio", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dr == DialogResult.Yes)
+                {
+                    Properties.Settings.Default.CancelRoute = null;
+                    Dashboard db = new Dashboard();
+                    db.Show();
+                }
+                else
+                {
+                    //
+                }
             }
             else
             {
                 //
             }
+
+            Properties.Settings.Default.CancelRoute = null;
         }
 
         private void IconBrowse_Click(object sender, EventArgs e)
@@ -323,11 +334,20 @@ namespace Moxo_QuickWeb
             if (sfd.ShowDialog() == DialogResult.OK)
             {
                 string Saved = sfd.FileName;
-                ZipFile.CreateFromDirectory(tmpdatafolder, Saved);
-                DialogResult dr = MessageBox.Show("Your application has been built. We've saved it as a ZIP archive. To start using your application, simply unzip it and launch the executable.","Application Generated | Moxo QuickWeb Studio [dotLX]", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                if(dr == DialogResult.OK)
+                try
                 {
-                    DummyCleanup.Start();
+                    ZipFile.CreateFromDirectory(tmpdatafolder, Saved);
+                    DialogResult dr = MessageBox.Show("Your application has been built. We've saved it as a ZIP archive. To start using your application, simply unzip it and launch the executable.", "Application Generated | Moxo QuickWeb Studio [dotLX]", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    if (dr == DialogResult.OK)
+                    {
+                        DummyCleanup.Start();
+                    }
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show("MOXDLX113A: There was a problem saving your application: " + Environment.NewLine + Environment.NewLine + ex.Message);
+                    CancelButton.Enabled = true;
+                    ContinueButton.Enabled = true;
                 }
             }
         }
@@ -337,6 +357,7 @@ namespace Moxo_QuickWeb
             string appdatadir = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
             string userdatadir = appdatadir + @"\RWE\Moxo\QuickWeb\";
             string tmpdatafolder = userdatadir + @"tmp\";
+            Properties.Settings.Default.CancelRoute = "FALSE";
 
             DummyCleanup.Stop();
             Directory.Delete(tmpdatafolder, true);
