@@ -36,6 +36,7 @@
             this.StartApplication = new System.Windows.Forms.Timer(this.components);
             this.Version = new System.Windows.Forms.Label();
             this.StartFileEditor = new System.Windows.Forms.Timer(this.components);
+            this.Settings = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
@@ -96,6 +97,15 @@
             this.StartFileEditor.Interval = 2512;
             this.StartFileEditor.Tick += new System.EventHandler(this.StartFileEditor_Tick);
             // 
+            // Settings
+            // 
+            this.Settings.Location = new System.Drawing.Point(12, 12);
+            this.Settings.Name = "Settings";
+            this.Settings.Size = new System.Drawing.Size(71, 32);
+            this.Settings.TabIndex = 5;
+            this.Settings.Text = "";
+            this.Settings.Visible = false;
+            // 
             // Splash
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -104,6 +114,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(559, 267);
             this.ControlBox = false;
+            this.Controls.Add(this.Settings);
             this.Controls.Add(this.Version);
             this.Controls.Add(this.Status);
             this.Controls.Add(this.pictureBox1);
@@ -128,6 +139,7 @@
         private System.Windows.Forms.Timer StartApplication;
         private System.Windows.Forms.Label Version;
         private System.Windows.Forms.Timer StartFileEditor;
+        private System.Windows.Forms.RichTextBox Settings;
     }
 }
 
