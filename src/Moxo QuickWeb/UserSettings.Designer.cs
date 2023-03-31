@@ -93,9 +93,10 @@
             // Checkbox_CheckUpdatesOnStartup
             // 
             this.Checkbox_CheckUpdatesOnStartup.AutoSize = true;
+            this.Checkbox_CheckUpdatesOnStartup.Font = new System.Drawing.Font("Segoe UI", 8F);
             this.Checkbox_CheckUpdatesOnStartup.Location = new System.Drawing.Point(15, 82);
             this.Checkbox_CheckUpdatesOnStartup.Name = "Checkbox_CheckUpdatesOnStartup";
-            this.Checkbox_CheckUpdatesOnStartup.Size = new System.Drawing.Size(59, 17);
+            this.Checkbox_CheckUpdatesOnStartup.Size = new System.Drawing.Size(61, 17);
             this.Checkbox_CheckUpdatesOnStartup.TabIndex = 43;
             this.Checkbox_CheckUpdatesOnStartup.Text = "Enable";
             this.Checkbox_CheckUpdatesOnStartup.UseVisualStyleBackColor = true;
