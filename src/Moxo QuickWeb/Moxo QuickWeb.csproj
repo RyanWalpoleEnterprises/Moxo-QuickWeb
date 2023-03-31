@@ -36,6 +36,9 @@
     <ApplicationIcon>MoxoIcon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DotNetZip, Version=1.16.0.0, Culture=neutral, PublicKeyToken=6583c7c814667745, processorArchitecture=MSIL">
+      <HintPath>packages\DotNetZip.1.16.0\lib\net40\DotNetZip.dll</HintPath>
+    </Reference>
     <Reference Include="Syncfusion.Edit.Windows, Version=20.4460.0.54, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
       <HintPath>packages\Syncfusion.Edit.Windows.20.4.0.54\lib\net46\Syncfusion.Edit.Windows.dll</HintPath>
     </Reference>
@@ -83,6 +86,12 @@
     <Compile Include="Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="dotLXUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dotLXUpdate.Designer.cs">
+      <DependentUpon>dotLXUpdate.cs</DependentUpon>
+    </Compile>
     <Compile Include="LXEditor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,8 +124,17 @@
     <Compile Include="Update.Designer.cs">
       <DependentUpon>Update.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserSettings.Designer.cs">
+      <DependentUpon>UserSettings.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dotLXUpdate.resx">
+      <DependentUpon>dotLXUpdate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LXEditor.resx">
       <DependentUpon>LXEditor.cs</DependentUpon>
@@ -142,6 +160,9 @@
     </Compile>
     <EmbeddedResource Include="Update.resx">
       <DependentUpon>Update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserSettings.resx">
+      <DependentUpon>UserSettings.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
