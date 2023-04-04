@@ -50,6 +50,21 @@ namespace Moxo_QuickWeb
                 Directory.Delete(tmpdatafolder, true);
             }
 
+            if(File.Exists(userdatadir + @"settings.ini"))
+            {
+                Settings.LoadFile(userdatadir + @"settings.ini", RichTextBoxStreamType.PlainText);
+                foreach(string line in Settings.Lines)
+                {
+                    if (line.StartsWith("$CheckUpdatesOnStartup=")) { Properties.Settings.Default.CheckUpdate = line.Replace("$CheckUpdatesOnStartup=",null); }
+                    Properties.Settings.Default.Save();
+                }
+            }
+            else
+            {
+                Settings.AppendText("$CheckUpdatesOnStartup=" + Properties.Settings.Default.CheckUpdate);
+                Settings.SaveFile(userdatadir + @"settings.ini", RichTextBoxStreamType.PlainText);
+            }
+
             Status.Text = "Starting QuickWeb Studio...";
             StartApplication.Start();
         }

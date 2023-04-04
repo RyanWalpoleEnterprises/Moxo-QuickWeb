@@ -25,7 +25,7 @@ namespace Moxo_QuickWeb.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("230303")]
+        [global::System.Configuration.DefaultSettingValueAttribute("230401")]
         public string Version {
             get {
                 return ((string)(this["Version"]));
@@ -49,7 +49,7 @@ namespace Moxo_QuickWeb.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("11312303P")]
+        [global::System.Configuration.DefaultSettingValueAttribute("0849A0304")]
         public string BuildVersion {
             get {
                 return ((string)(this["BuildVersion"]));
@@ -104,6 +104,18 @@ namespace Moxo_QuickWeb.Properties {
             }
             set {
                 this["CancelRoute"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("1.1")]
+        public string dotLXFrameworkVersion {
+            get {
+                return ((string)(this["dotLXFrameworkVersion"]));
+            }
+            set {
+                this["dotLXFrameworkVersion"] = value;
             }
         }
     }
