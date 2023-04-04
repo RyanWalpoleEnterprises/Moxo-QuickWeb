@@ -95,6 +95,12 @@ namespace Moxo_QuickWeb
 
         private void Dashboard_FormClosed(object sender, FormClosedEventArgs e)
         {
+            string appdatadir = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+            string userdatadir = appdatadir + @"\RWE\Moxo\QuickWeb\";
+
+            SettingManagement.AppendText("$CheckUpdatesOnStartup=" + Properties.Settings.Default.CheckUpdate);
+            SettingManagement.SaveFile(userdatadir + @"settings.ini", RichTextBoxStreamType.PlainText);
+
             Application.Exit();
         }
 
@@ -155,5 +161,16 @@ namespace Moxo_QuickWeb
             Process.Start("https://github.com/RyanWalpoleEnterprises/Moxo-QuickWeb/issues");
         }
 
+        private void UpdateDotLX_Click(object sender, EventArgs e)
+        {
+            dotLXUpdate updateapp = new dotLXUpdate();
+            updateapp.ShowDialog();
+        }
+
+        private void Settings_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            UserSettings settings = new UserSettings();
+            settings.ShowDialog();
+        }
     }
 }

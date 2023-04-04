@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "Moxo QuickWeb Studio"
-#define MyAppVersion "230303"
+#define MyAppVersion "230401"
 #define MyAppPublisher "Ryan Walpole Enterprises"
 #define MyAppURL "https://ryanwalpole.com/developer/moxo"
 #define MyAppExeName "Moxo QuickWeb.exe"
@@ -28,7 +28,7 @@ DefaultDirName=C:\Program Files (x86)\RWE\Moxo\QuickWeb
 DisableDirPage=yes
 ChangesAssociations=yes
 DisableProgramGroupPage=yes
-LicenseFile=I:\MoxoEULA.rtf
+LicenseFile=H:\MoxoEULA.rtf
 ; Uncomment the following line to run in non administrative install mode (install for current user only.)
 ;PrivilegesRequired=lowest
 OutputDir=C:\Users\rwalpole\Documents\GitHub\Moxo-QuickWeb\installer

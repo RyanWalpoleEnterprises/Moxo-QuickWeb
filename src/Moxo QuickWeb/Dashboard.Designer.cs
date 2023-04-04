@@ -41,9 +41,12 @@
             this.Version = new System.Windows.Forms.Label();
             this.UpdateCheck = new System.ComponentModel.BackgroundWorker();
             this.DelayUpdateCheck = new System.Windows.Forms.Timer(this.components);
+            this.UpdateDotLX = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.SettingManagement = new System.Windows.Forms.RichTextBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.Settings = new System.Windows.Forms.LinkLabel();
             this.CheckForUpdates = new System.Windows.Forms.LinkLabel();
@@ -57,9 +60,9 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9.25F);
-            this.label1.Location = new System.Drawing.Point(19, 332);
+            this.label1.Location = new System.Drawing.Point(19, 327);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(231, 77);
+            this.label1.Size = new System.Drawing.Size(249, 77);
             this.label1.TabIndex = 1;
             this.label1.Text = "Turn your web-application into a Windows Desktop application with .NET that can b" +
     "e edited and expanded upon with Visual Studio";
@@ -68,9 +71,9 @@
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Segoe UI", 9.25F);
-            this.label2.Location = new System.Drawing.Point(297, 332);
+            this.label2.Location = new System.Drawing.Point(327, 327);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(213, 77);
+            this.label2.Size = new System.Drawing.Size(240, 77);
             this.label2.TabIndex = 3;
             this.label2.Text = "Turn your web-application into a Windows Desktop application with dotLX, the succ" +
     "essor to the Code LX programming language.";
@@ -83,7 +86,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(240, 42);
             this.label3.TabIndex = 5;
-            this.label3.Text = "Create a Web-App";
+            this.label3.Text = "Get Started";
             // 
             // label4
             // 
@@ -92,33 +95,33 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(538, 28);
             this.label4.TabIndex = 6;
-            this.label4.Text = "Select a project type from the available types below:";
+            this.label4.Text = "What would you like to do today?";
             // 
             // StartDotNet
             // 
-            this.StartDotNet.Location = new System.Drawing.Point(28, 420);
+            this.StartDotNet.Location = new System.Drawing.Point(327, 415);
             this.StartDotNet.Name = "StartDotNet";
-            this.StartDotNet.Size = new System.Drawing.Size(104, 29);
+            this.StartDotNet.Size = new System.Drawing.Size(240, 29);
             this.StartDotNet.TabIndex = 7;
-            this.StartDotNet.Text = "Get Started";
+            this.StartDotNet.Text = "Create New Application";
             this.StartDotNet.UseVisualStyleBackColor = true;
             this.StartDotNet.Click += new System.EventHandler(this.StartDotNet_Click);
             // 
             // StartDotLX
             // 
-            this.StartDotLX.Location = new System.Drawing.Point(297, 420);
+            this.StartDotLX.Location = new System.Drawing.Point(28, 415);
             this.StartDotLX.Name = "StartDotLX";
-            this.StartDotLX.Size = new System.Drawing.Size(104, 29);
+            this.StartDotLX.Size = new System.Drawing.Size(240, 29);
             this.StartDotLX.TabIndex = 8;
-            this.StartDotLX.Text = "Get Started";
+            this.StartDotLX.Text = "Create New Application";
             this.StartDotLX.UseVisualStyleBackColor = true;
             this.StartDotLX.Click += new System.EventHandler(this.StartDotLX_Click);
             // 
             // DocsDotNet
             // 
-            this.DocsDotNet.Location = new System.Drawing.Point(138, 420);
+            this.DocsDotNet.Location = new System.Drawing.Point(28, 448);
             this.DocsDotNet.Name = "DocsDotNet";
-            this.DocsDotNet.Size = new System.Drawing.Size(103, 29);
+            this.DocsDotNet.Size = new System.Drawing.Size(240, 29);
             this.DocsDotNet.TabIndex = 9;
             this.DocsDotNet.Text = "Documentation";
             this.DocsDotNet.UseVisualStyleBackColor = true;
@@ -126,9 +129,9 @@
             // 
             // DocsDotLX
             // 
-            this.DocsDotLX.Location = new System.Drawing.Point(407, 420);
+            this.DocsDotLX.Location = new System.Drawing.Point(450, 448);
             this.DocsDotLX.Name = "DocsDotLX";
-            this.DocsDotLX.Size = new System.Drawing.Size(103, 29);
+            this.DocsDotLX.Size = new System.Drawing.Size(117, 29);
             this.DocsDotLX.TabIndex = 10;
             this.DocsDotLX.Text = "Documentation";
             this.DocsDotLX.UseVisualStyleBackColor = true;
@@ -136,10 +139,11 @@
             // 
             // Version
             // 
+            this.Version.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.Version.BackColor = System.Drawing.Color.Transparent;
             this.Version.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.Version.ForeColor = System.Drawing.Color.Gray;
-            this.Version.Location = new System.Drawing.Point(6, 473);
+            this.Version.Location = new System.Drawing.Point(6, 507);
             this.Version.Name = "Version";
             this.Version.Size = new System.Drawing.Size(169, 23);
             this.Version.TabIndex = 11;
@@ -156,13 +160,31 @@
             this.DelayUpdateCheck.Interval = 2512;
             this.DelayUpdateCheck.Tick += new System.EventHandler(this.DelayUpdateCheck_Tick);
             // 
+            // UpdateDotLX
+            // 
+            this.UpdateDotLX.Location = new System.Drawing.Point(327, 448);
+            this.UpdateDotLX.Name = "UpdateDotLX";
+            this.UpdateDotLX.Size = new System.Drawing.Size(117, 29);
+            this.UpdateDotLX.TabIndex = 12;
+            this.UpdateDotLX.Text = "Update Existing";
+            this.UpdateDotLX.UseVisualStyleBackColor = true;
+            this.UpdateDotLX.Click += new System.EventHandler(this.UpdateDotLX_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel2.Location = new System.Drawing.Point(296, 257);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(3, 230);
+            this.panel2.TabIndex = 14;
+            // 
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Image = global::Moxo_QuickWeb.Properties.Resources.DotLXLogo;
-            this.pictureBox3.Location = new System.Drawing.Point(297, 262);
+            this.pictureBox3.Location = new System.Drawing.Point(327, 272);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(213, 67);
+            this.pictureBox3.Size = new System.Drawing.Size(240, 52);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 4;
             this.pictureBox3.TabStop = false;
@@ -171,25 +193,37 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = global::Moxo_QuickWeb.Properties.Resources._NETLogoMoxo;
-            this.pictureBox2.Location = new System.Drawing.Point(28, 262);
+            this.pictureBox2.Location = new System.Drawing.Point(28, 272);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(213, 67);
+            this.pictureBox2.Size = new System.Drawing.Size(240, 52);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackgroundImage = global::Moxo_QuickWeb.Properties.Resources.MoxoBackground_Color;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.SettingManagement);
             this.panel1.Controls.Add(this.pictureBox4);
             this.panel1.Controls.Add(this.Settings);
             this.panel1.Controls.Add(this.CheckForUpdates);
             this.panel1.Controls.Add(this.IssueReport);
             this.panel1.Location = new System.Drawing.Point(-3, -1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(554, 154);
+            this.panel1.Size = new System.Drawing.Size(607, 154);
             this.panel1.TabIndex = 0;
+            // 
+            // SettingManagement
+            // 
+            this.SettingManagement.Location = new System.Drawing.Point(12, 13);
+            this.SettingManagement.Name = "SettingManagement";
+            this.SettingManagement.Size = new System.Drawing.Size(22, 15);
+            this.SettingManagement.TabIndex = 15;
+            this.SettingManagement.Text = "";
+            this.SettingManagement.Visible = false;
             // 
             // pictureBox4
             // 
@@ -205,27 +239,29 @@
             // Settings
             // 
             this.Settings.ActiveLinkColor = System.Drawing.Color.White;
+            this.Settings.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Settings.BackColor = System.Drawing.Color.Transparent;
             this.Settings.Font = new System.Drawing.Font("Segoe UI", 8F);
             this.Settings.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.Settings.LinkColor = System.Drawing.Color.White;
-            this.Settings.Location = new System.Drawing.Point(317, 87);
+            this.Settings.Location = new System.Drawing.Point(370, 87);
             this.Settings.Name = "Settings";
             this.Settings.Size = new System.Drawing.Size(223, 19);
             this.Settings.TabIndex = 12;
             this.Settings.TabStop = true;
             this.Settings.Text = "Settings";
             this.Settings.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Settings.Visible = false;
+            this.Settings.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Settings_LinkClicked);
             // 
             // CheckForUpdates
             // 
             this.CheckForUpdates.ActiveLinkColor = System.Drawing.Color.White;
+            this.CheckForUpdates.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.CheckForUpdates.BackColor = System.Drawing.Color.Transparent;
             this.CheckForUpdates.Font = new System.Drawing.Font("Segoe UI", 8F);
             this.CheckForUpdates.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.CheckForUpdates.LinkColor = System.Drawing.Color.White;
-            this.CheckForUpdates.Location = new System.Drawing.Point(314, 103);
+            this.CheckForUpdates.Location = new System.Drawing.Point(367, 103);
             this.CheckForUpdates.Name = "CheckForUpdates";
             this.CheckForUpdates.Size = new System.Drawing.Size(226, 19);
             this.CheckForUpdates.TabIndex = 10;
@@ -237,11 +273,12 @@
             // IssueReport
             // 
             this.IssueReport.ActiveLinkColor = System.Drawing.Color.White;
+            this.IssueReport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.IssueReport.BackColor = System.Drawing.Color.Transparent;
             this.IssueReport.Font = new System.Drawing.Font("Segoe UI", 8F);
             this.IssueReport.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.IssueReport.LinkColor = System.Drawing.Color.White;
-            this.IssueReport.Location = new System.Drawing.Point(320, 118);
+            this.IssueReport.Location = new System.Drawing.Point(373, 118);
             this.IssueReport.Name = "IssueReport";
             this.IssueReport.Size = new System.Drawing.Size(220, 19);
             this.IssueReport.TabIndex = 11;
@@ -255,7 +292,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(545, 498);
+            this.ClientSize = new System.Drawing.Size(598, 532);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.UpdateDotLX);
             this.Controls.Add(this.Version);
             this.Controls.Add(this.DocsDotLX);
             this.Controls.Add(this.DocsDotNet);
@@ -304,5 +343,8 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         public System.ComponentModel.BackgroundWorker UpdateCheck;
         private System.Windows.Forms.Timer DelayUpdateCheck;
+        private System.Windows.Forms.Button UpdateDotLX;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.RichTextBox SettingManagement;
     }
 }

@@ -32,3 +32,8 @@ C:\Users\rwalpole\Documents\GitHub\Moxo-QuickWeb\src\Moxo QuickWeb\bin\Release\S
 C:\Users\rwalpole\Documents\GitHub\Moxo-QuickWeb\src\Moxo QuickWeb\bin\Release\Syncfusion.Tools.Windows.xml
 C:\Users\rwalpole\Documents\GitHub\Moxo-QuickWeb\src\Moxo QuickWeb\obj\Release\Moxo_QuickWeb.LXEditor.resources
 C:\Users\rwalpole\Documents\GitHub\Moxo-QuickWeb\src\Moxo QuickWeb\obj\Release\Moxo QuickWeb.csproj.CopyComplete
+C:\Users\rwalpole\Documents\GitHub\Moxo-QuickWeb\src\Moxo QuickWeb\bin\Release\DotNetZip.dll
+C:\Users\rwalpole\Documents\GitHub\Moxo-QuickWeb\src\Moxo QuickWeb\bin\Release\DotNetZip.pdb
+C:\Users\rwalpole\Documents\GitHub\Moxo-QuickWeb\src\Moxo QuickWeb\bin\Release\DotNetZip.xml
+C:\Users\rwalpole\Documents\GitHub\Moxo-QuickWeb\src\Moxo QuickWeb\obj\Release\Moxo_QuickWeb.dotLXUpdate.resources
+C:\Users\rwalpole\Documents\GitHub\Moxo-QuickWeb\src\Moxo QuickWeb\obj\Release\Moxo_QuickWeb.UserSettings.resources
