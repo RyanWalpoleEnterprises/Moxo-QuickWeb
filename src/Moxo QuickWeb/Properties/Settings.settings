@@ -3,13 +3,13 @@
   <Profiles />
   <Settings>
     <Setting Name="Version" Type="System.String" Scope="User">
-      <Value Profile="(Default)">230401</Value>
+      <Value Profile="(Default)">230402</Value>
     </Setting>
     <Setting Name="dotLX_tmpICO" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
     <Setting Name="BuildVersion" Type="System.String" Scope="User">
-      <Value Profile="(Default)">0849A0304</Value>
+      <Value Profile="(Default)">1205P0604</Value>
     </Setting>
     <Setting Name="CheckUpdate" Type="System.String" Scope="User">
       <Value Profile="(Default)">TRUE</Value>
