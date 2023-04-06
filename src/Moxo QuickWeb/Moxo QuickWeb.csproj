@@ -201,6 +201,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="MoxoIcon.ico" />
+    <None Include="Resources\WhiteSpace.png" />
+    <None Include="Resources\CloudDownload.png" />
+    <None Include="Resources\icons8-settings-96 %282%29.png" />
+    <None Include="Resources\icons8-star-filled-96.png" />
     <None Include="Resources\Redo.png" />
     <None Include="Resources\Undo.png" />
     <None Include="Resources\Save.png" />
