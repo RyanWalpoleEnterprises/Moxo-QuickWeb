@@ -32,7 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Splash));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.Status = new System.Windows.Forms.Label();
             this.StartApplication = new System.Windows.Forms.Timer(this.components);
             this.Version = new System.Windows.Forms.Label();
             this.StartFileEditor = new System.Windows.Forms.Timer(this.components);
@@ -44,10 +43,10 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::Moxo_QuickWeb.Properties.Resources.MoxoQWSWhiteFullLogo;
-            this.pictureBox1.Location = new System.Drawing.Point(1, 89);
+            this.pictureBox1.Image = global::Moxo_QuickWeb.Properties.Resources.MoxoQWSStacked;
+            this.pictureBox1.Location = new System.Drawing.Point(1, 60);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(558, 51);
+            this.pictureBox1.Size = new System.Drawing.Size(558, 120);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -62,18 +61,6 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 2;
             this.pictureBox3.TabStop = false;
-            // 
-            // Status
-            // 
-            this.Status.BackColor = System.Drawing.Color.Transparent;
-            this.Status.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Status.ForeColor = System.Drawing.Color.White;
-            this.Status.Location = new System.Drawing.Point(0, 154);
-            this.Status.Name = "Status";
-            this.Status.Size = new System.Drawing.Size(559, 23);
-            this.Status.TabIndex = 3;
-            this.Status.Text = "Starting QuickWeb ...";
-            this.Status.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // StartApplication
             // 
@@ -116,7 +103,6 @@
             this.ControlBox = false;
             this.Controls.Add(this.Settings);
             this.Controls.Add(this.Version);
-            this.Controls.Add(this.Status);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox3);
             this.DoubleBuffered = true;
@@ -135,7 +121,6 @@
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label Status;
         private System.Windows.Forms.Timer StartApplication;
         private System.Windows.Forms.Label Version;
         private System.Windows.Forms.Timer StartFileEditor;
