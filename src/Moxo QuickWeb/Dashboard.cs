@@ -51,22 +51,13 @@ namespace Moxo_QuickWeb
                 {
                     Properties.Settings.Default.UpdateReady = "FALSE";
                     CheckForUpdates.Text = "No updates available";
+                    UpdatePanel.Visible = false;
                 }
                 else if (!CVER.Contains(Properties.Settings.Default.Version))
                 {
                     Properties.Settings.Default.UpdateReady = "TRUE";
                     CheckForUpdates.Text = "Updates available";
-                    DialogResult result = MessageBox.Show("Moxo QuickWeb Studio has available updates. Would you like to download and install these updates now?", "Moxo QuickWeb Studio", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                    if (result == DialogResult.Yes)
-                    {
-                        Update update = new Update();
-                        update.ShowDialog();
-                        this.Hide();
-                    }
-                    else
-                    {
-                        //
-                    }
+                    UpdatePanel.Visible = true;
                 }
             }
             catch
@@ -138,21 +129,12 @@ namespace Moxo_QuickWeb
             if(Properties.Settings.Default.UpdateReady == "TRUE")
             {
                 CheckForUpdates.Text = "Updates available";
-                DialogResult result = MessageBox.Show("Moxo QuickWeb Studio has available updates. Would you like to download and install these updates now?", "Moxo QuickWeb Studio", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (result == DialogResult.Yes)
-                {
-                    Update update = new Update();
-                    update.ShowDialog();
-                    this.Hide();
-                }
-                else
-                {
-                    //
-                }
+                UpdatePanel.Visible = true;
             }
             else if(Properties.Settings.Default.UpdateReady == "FALSE")
             {
                 CheckForUpdates.Text = "No updates available";
+                UpdatePanel.Visible = false;
             }
         }
 
@@ -171,6 +153,13 @@ namespace Moxo_QuickWeb
         {
             UserSettings settings = new UserSettings();
             settings.ShowDialog();
+        }
+
+        private void UpdatePanel_Click(object sender, EventArgs e)
+        {
+            Update update = new Update();
+            update.ShowDialog();
+            this.Hide();
         }
     }
 }

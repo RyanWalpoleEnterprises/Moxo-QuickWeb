@@ -46,6 +46,11 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.UpdatePanel = new System.Windows.Forms.Panel();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.SettingManagement = new System.Windows.Forms.RichTextBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.Settings = new System.Windows.Forms.LinkLabel();
@@ -54,13 +59,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
+            this.UpdatePanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9.25F);
-            this.label1.Location = new System.Drawing.Point(19, 327);
+            this.label1.Location = new System.Drawing.Point(19, 324);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(249, 77);
             this.label1.TabIndex = 1;
@@ -71,7 +79,7 @@
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Segoe UI", 9.25F);
-            this.label2.Location = new System.Drawing.Point(327, 327);
+            this.label2.Location = new System.Drawing.Point(327, 324);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(240, 77);
             this.label2.TabIndex = 3;
@@ -182,7 +190,7 @@
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Image = global::Moxo_QuickWeb.Properties.Resources.DotLXLogo;
-            this.pictureBox3.Location = new System.Drawing.Point(327, 272);
+            this.pictureBox3.Location = new System.Drawing.Point(327, 264);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(240, 52);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -193,7 +201,7 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = global::Moxo_QuickWeb.Properties.Resources._NETLogoMoxo;
-            this.pictureBox2.Location = new System.Drawing.Point(28, 272);
+            this.pictureBox2.Location = new System.Drawing.Point(28, 264);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(240, 52);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -206,6 +214,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackgroundImage = global::Moxo_QuickWeb.Properties.Resources.MoxoBackground_Color;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.UpdatePanel);
             this.panel1.Controls.Add(this.SettingManagement);
             this.panel1.Controls.Add(this.pictureBox4);
             this.panel1.Controls.Add(this.Settings);
@@ -215,6 +224,65 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(607, 154);
             this.panel1.TabIndex = 0;
+            // 
+            // UpdatePanel
+            // 
+            this.UpdatePanel.BackColor = System.Drawing.Color.Transparent;
+            this.UpdatePanel.Controls.Add(this.pictureBox5);
+            this.UpdatePanel.Controls.Add(this.label6);
+            this.UpdatePanel.Controls.Add(this.label5);
+            this.UpdatePanel.Controls.Add(this.pictureBox1);
+            this.UpdatePanel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.UpdatePanel.Location = new System.Drawing.Point(337, 13);
+            this.UpdatePanel.Name = "UpdatePanel";
+            this.UpdatePanel.Size = new System.Drawing.Size(263, 71);
+            this.UpdatePanel.TabIndex = 16;
+            this.UpdatePanel.Visible = false;
+            this.UpdatePanel.Click += new System.EventHandler(this.UpdatePanel_Click);
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::Moxo_QuickWeb.Properties.Resources.WhiteSpace;
+            this.pictureBox5.Location = new System.Drawing.Point(7, 64);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(246, 2);
+            this.pictureBox5.TabIndex = 17;
+            this.pictureBox5.TabStop = false;
+            // 
+            // label6
+            // 
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(6, 31);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(197, 30);
+            this.label6.TabIndex = 16;
+            this.label6.Text = "An update for Moxo QuickWeb Studio is available. Click here to update.";
+            this.label6.Click += new System.EventHandler(this.UpdatePanel_Click);
+            // 
+            // label5
+            // 
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F);
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(4, 7);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(164, 23);
+            this.label5.TabIndex = 15;
+            this.label5.Text = "Updates Available";
+            this.label5.Click += new System.EventHandler(this.UpdatePanel_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Moxo_QuickWeb.Properties.Resources.CloudDownload;
+            this.pictureBox1.Location = new System.Drawing.Point(214, 8);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(42, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.UpdatePanel_Click);
             // 
             // SettingManagement
             // 
@@ -318,6 +386,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel1.ResumeLayout(false);
+            this.UpdatePanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
 
@@ -346,5 +417,10 @@
         private System.Windows.Forms.Button UpdateDotLX;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.RichTextBox SettingManagement;
+        private System.Windows.Forms.Panel UpdatePanel;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.PictureBox pictureBox5;
     }
 }
