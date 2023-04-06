@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "Moxo QuickWeb Studio"
-#define MyAppVersion "230401"
+#define MyAppVersion "230402"
 #define MyAppPublisher "Ryan Walpole Enterprises"
 #define MyAppURL "https://ryanwalpole.com/developer/moxo"
 #define MyAppExeName "Moxo QuickWeb.exe"
