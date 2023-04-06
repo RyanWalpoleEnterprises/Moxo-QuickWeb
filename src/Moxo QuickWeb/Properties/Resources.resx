@@ -124,6 +124,9 @@
   <data name="file-cancel (Custom)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\file-cancel (Custom).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Redo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Redo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="MoxoQWSStacked" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MoxoQWSStacked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -133,8 +136,8 @@
   <data name="check-circle" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\check-circle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="MoxoQWSColorLogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MoxoQWSColorLogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Undo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Undo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="RWE_logo_White" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\RWE_logo_White.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -145,17 +148,20 @@
   <data name="MoxoForwardPreview" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MoxoForwardPreview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icons8-settings-96 (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-settings-96 (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="MoxoBracketHeightThin" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MoxoBracketHeightThin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CloudDownload" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CloudDownload.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="file-cancel (Custom) (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\file-cancel (Custom) (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="MoxoQWSWhiteLogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MoxoQWSWhiteLogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Undo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Undo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="MoxoBackground-Color" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MoxoBackground-Color.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -168,6 +174,9 @@
   </data>
   <data name="MoxoLogoFullWhite1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MoxoLogoFullWhite1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MoxoQWSColorLogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MoxoQWSColorLogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="MoxoBracketWidthThin" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MoxoBracketWidthThin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -196,6 +205,9 @@
   <data name="MoxoBracketHeight" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MoxoBracketHeight.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icons8-star-filled-96" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-star-filled-96.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="MoxoBlankWindow" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MoxoBlankWindow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -205,7 +217,7 @@
   <data name="check-circle (Custom)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\check-circle (Custom).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Redo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Redo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="WhiteSpace" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WhiteSpace.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
