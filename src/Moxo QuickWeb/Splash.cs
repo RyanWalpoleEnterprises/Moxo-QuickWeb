@@ -34,7 +34,7 @@ namespace Moxo_QuickWeb
 
         private void CheckDirectories()
         {
-            Status.Text = "Validating directories...";
+            //Status.Text = "Validating directories...";
 
             string appdatadir = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
             string userdatadir = appdatadir + @"\RWE\Moxo\QuickWeb\";
@@ -65,7 +65,7 @@ namespace Moxo_QuickWeb
                 Settings.SaveFile(userdatadir + @"settings.ini", RichTextBoxStreamType.PlainText);
             }
 
-            Status.Text = "Starting QuickWeb Studio...";
+            //Status.Text = "Starting QuickWeb Studio...";
             StartApplication.Start();
         }
 
