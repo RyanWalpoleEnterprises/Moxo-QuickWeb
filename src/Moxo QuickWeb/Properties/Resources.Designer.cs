@@ -93,6 +93,16 @@ namespace Moxo_QuickWeb.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap CloudDownload {
+            get {
+                object obj = ResourceManager.GetObject("CloudDownload", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap DotLXLogo {
             get {
                 object obj = ResourceManager.GetObject("DotLXLogo", resourceCulture);
@@ -126,6 +136,26 @@ namespace Moxo_QuickWeb.Properties {
         internal static System.Drawing.Bitmap file_cancel__Custom___1_ {
             get {
                 object obj = ResourceManager.GetObject("file-cancel (Custom) (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_settings_96__2_ {
+            get {
+                object obj = ResourceManager.GetObject("icons8-settings-96 (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_star_filled_96 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-star-filled-96", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -356,6 +386,16 @@ namespace Moxo_QuickWeb.Properties {
         internal static System.Drawing.Bitmap Undo {
             get {
                 object obj = ResourceManager.GetObject("Undo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WhiteSpace {
+            get {
+                object obj = ResourceManager.GetObject("WhiteSpace", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

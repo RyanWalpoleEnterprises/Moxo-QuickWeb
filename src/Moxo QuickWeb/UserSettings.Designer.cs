@@ -68,7 +68,6 @@
             // 
             // SaveSettings
             // 
-            this.SaveSettings.Enabled = false;
             this.SaveSettings.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.SaveSettings.Location = new System.Drawing.Point(206, 151);
             this.SaveSettings.Name = "SaveSettings";
@@ -80,7 +79,6 @@
             // 
             // Cancel
             // 
-            this.Cancel.Enabled = false;
             this.Cancel.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.Cancel.Location = new System.Drawing.Point(120, 151);
             this.Cancel.Name = "Cancel";

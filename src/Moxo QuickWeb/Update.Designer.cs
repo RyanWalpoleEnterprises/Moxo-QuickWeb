@@ -85,7 +85,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(408, 170);
+            this.ClientSize = new System.Drawing.Size(408, 180);
             this.ControlBox = false;
             this.Controls.Add(this.StatusText);
             this.Controls.Add(this.pictureBox1);
