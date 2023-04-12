@@ -49,7 +49,7 @@ namespace Moxo_QuickWeb.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("1205P0604")]
+        [global::System.Configuration.DefaultSettingValueAttribute("0915A1304")]
         public string BuildVersion {
             get {
                 return ((string)(this["BuildVersion"]));
